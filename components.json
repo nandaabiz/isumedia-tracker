@@ -1,0 +1,36 @@
+{
+  "$schema": "https://shadcn-vue.com/schema.json",
+  "style": "luma",
+  "typescript": true,
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "assets/css/main.css",
+    "baseColor": "mist",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "framework": "nuxt",
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "composables": "@/composables"
+  },
+  "iconLibrary": "lucide",
+  "preset": "b2D2hq2C0",
+  "presetConfig": {
+    "code": "b2D2hq2C0",
+    "version": "b",
+    "style": "luma",
+    "baseColor": "mist",
+    "theme": "blue",
+    "chartColor": "emerald",
+    "font": "inter",
+    "fontHeading": "inherit",
+    "iconLibrary": "lucide",
+    "menuColor": "default",
+    "menuAccent": "subtle",
+    "radius": "default"
+  }
+}

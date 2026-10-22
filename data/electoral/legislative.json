@@ -1,0 +1,8636 @@
+{
+  "2014": {
+    "11": {
+      "totalValidVotes": 2316226,
+      "parties": [
+        {
+          "partyCode": "GERINDRA",
+          "votes": 366385,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 352009,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 271574,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 241196,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 232500,
+          "seats": 2
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 200731,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 179808,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 145700,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 137656,
+          "seats": 1
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 88182,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 67506,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 32979,
+          "seats": 0
+        }
+      ]
+    },
+    "12": {
+      "totalValidVotes": 6124359,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 1004498,
+          "seats": 4
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 956428,
+          "seats": 4
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 816642,
+          "seats": 4
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 728699,
+          "seats": 3
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 500672,
+          "seats": 3
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 465139,
+          "seats": 3
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 441565,
+          "seats": 3
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 412448,
+          "seats": 3
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 314944,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 255058,
+          "seats": 1
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 129700,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 98566,
+          "seats": 0
+        }
+      ]
+    },
+    "13": {
+      "totalValidVotes": 2405339,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 403249,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 348280,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 302231,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 226648,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 214493,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 206296,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 205760,
+          "seats": 2
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 184065,
+          "seats": 2
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 136148,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 88370,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 65693,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 24106,
+          "seats": 0
+        }
+      ]
+    },
+    "14": {
+      "totalValidVotes": 2679684,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 544986,
+          "seats": 2
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 374487,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 266730,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 261204,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 260074,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 216842,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 190003,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 187201,
+          "seats": 0
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 165854,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 122706,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 62269,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 27328,
+          "seats": 0
+        }
+      ]
+    },
+    "15": {
+      "totalValidVotes": 1691958,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 288724,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 274143,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 235471,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 193970,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 179438,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 105551,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 104628,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 98336,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 85439,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 70303,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 39203,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 16752,
+          "seats": 0
+        }
+      ]
+    },
+    "16": {
+      "totalValidVotes": 3943842,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 692609,
+          "seats": 3
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 660836,
+          "seats": 3
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 505105,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 396402,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 333224,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 279348,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 277486,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 242470,
+          "seats": 2
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 217859,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 168796,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 124443,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 45264,
+          "seats": 0
+        }
+      ]
+    },
+    "17": {
+      "totalValidVotes": 923755,
+      "parties": [
+        {
+          "partyCode": "NASDEM",
+          "votes": 130759,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 119296,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 108507,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 92680,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 92612,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 81522,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 75826,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 74443,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 61856,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 49668,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 18923,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 17663,
+          "seats": 0
+        }
+      ]
+    },
+    "18": {
+      "totalValidVotes": 4059500,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 711346,
+          "seats": 4
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 538643,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 470792,
+          "seats": 2
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 464318,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 421464,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 352971,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 333767,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 304422,
+          "seats": 1
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 232196,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 148105,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 45482,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 35994,
+          "seats": 0
+        }
+      ]
+    },
+    "19": {
+      "totalValidVotes": 583447,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 137085,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 71063,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 62718,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 52370,
+          "seats": 0
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 47763,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 46306,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 41897,
+          "seats": 0
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 37250,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 31748,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 24519,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 22662,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 8066,
+          "seats": 0
+        }
+      ]
+    },
+    "21": {
+      "totalValidVotes": 822336,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 132412,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 119044,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 95848,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 95354,
+          "seats": 0
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 91942,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 81150,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 66095,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 50736,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 37760,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 28976,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 11913,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 11106,
+          "seats": 0
+        }
+      ]
+    },
+    "31": {
+      "totalValidVotes": 4891034,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 1410173,
+          "seats": 6
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 610780,
+          "seats": 3
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 537905,
+          "seats": 3
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 497852,
+          "seats": 3
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 434428,
+          "seats": 3
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 351993,
+          "seats": 2
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 286752,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 239181,
+          "seats": 0
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 231530,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 211540,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 51558,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 27342,
+          "seats": 0
+        }
+      ]
+    },
+    "32": {
+      "totalValidVotes": 21190627,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 4159411,
+          "seats": 18
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 3540629,
+          "seats": 17
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 2378762,
+          "seats": 10
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 1931014,
+          "seats": 9
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 1903548,
+          "seats": 11
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 1631804,
+          "seats": 7
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 1572734,
+          "seats": 7
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 1391480,
+          "seats": 7
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 1157286,
+          "seats": 4
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 1035728,
+          "seats": 1
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 368483,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 119748,
+          "seats": 0
+        }
+      ]
+    },
+    "33": {
+      "totalValidVotes": 17603459,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 4295605,
+          "seats": 18
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 2497282,
+          "seats": 11
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 2305442,
+          "seats": 10
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 2023080,
+          "seats": 10
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 1208202,
+          "seats": 8
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 1151773,
+          "seats": 7
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 1120719,
+          "seats": 4
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 1076508,
+          "seats": 4
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 1035126,
+          "seats": 5
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 730752,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 99132,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 59838,
+          "seats": 0
+        }
+      ]
+    },
+    "34": {
+      "totalValidVotes": 2059453,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 570531,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 355787,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 244144,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 200474,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 147875,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 146688,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 129943,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 107433,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 94435,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 42782,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 14162,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 5199,
+          "seats": 0
+        }
+      ]
+    },
+    "35": {
+      "totalValidVotes": 19992320,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 3580945,
+          "seats": 17
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 3533902,
+          "seats": 15
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 2356570,
+          "seats": 11
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 2148053,
+          "seats": 11
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 2142221,
+          "seats": 11
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 1495471,
+          "seats": 7
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 1305335,
+          "seats": 4
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 1258905,
+          "seats": 7
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 1035223,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 887111,
+          "seats": 2
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 166684,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 81900,
+          "seats": 0
+        }
+      ]
+    },
+    "36": {
+      "totalValidVotes": 4841859,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 815517,
+          "seats": 4
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 650492,
+          "seats": 3
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 641510,
+          "seats": 3
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 502954,
+          "seats": 2
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 410960,
+          "seats": 3
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 391847,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 350146,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 348628,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 316865,
+          "seats": 1
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 274292,
+          "seats": 1
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 89210,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 49438,
+          "seats": 0
+        }
+      ]
+    },
+    "51": {
+      "totalValidVotes": 2024250,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 872885,
+          "seats": 4
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 329620,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 311246,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 219521,
+          "seats": 1
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 77247,
+          "seats": 0
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 60969,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 39281,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 37090,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 33985,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 23628,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 15047,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 3731,
+          "seats": 0
+        }
+      ]
+    },
+    "52": {
+      "totalValidVotes": 2412489,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 333282,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 318713,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 263621,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 253870,
+          "seats": 1
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 222410,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 196074,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 189569,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 182320,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 172421,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 154981,
+          "seats": 1
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 83768,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 41460,
+          "seats": 0
+        }
+      ]
+    },
+    "53": {
+      "totalValidVotes": 2355161,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 452196,
+          "seats": 3
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 403821,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 316010,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 270964,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 233929,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 205905,
+          "seats": 1
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 148255,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 130925,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 61999,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 59973,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 40909,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 30275,
+          "seats": 0
+        }
+      ]
+    },
+    "61": {
+      "totalValidVotes": 2478262,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 817770,
+          "seats": 3
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 348986,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 236281,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 196890,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 196212,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 168741,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 136564,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 117937,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 102146,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 86741,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 39181,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 30813,
+          "seats": 0
+        }
+      ]
+    },
+    "62": {
+      "totalValidVotes": 1139544,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 350701,
+          "seats": 2
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 141095,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 120019,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 85960,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 84259,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 79756,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 75467,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 67753,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 50941,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 49522,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 18640,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 15431,
+          "seats": 0
+        }
+      ]
+    },
+    "63": {
+      "totalValidVotes": 1837931,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 486314,
+          "seats": 3
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 215082,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 202893,
+          "seats": 2
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 192364,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 172398,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 152108,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 102431,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 101071,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 95110,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 73068,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 30734,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 14358,
+          "seats": 0
+        }
+      ]
+    },
+    "64": {
+      "totalValidVotes": 1798439,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 362238,
+          "seats": 2
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 312574,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 222472,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 159977,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 144705,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 131381,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 117117,
+          "seats": 1
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 98587,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 96998,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 84147,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 40586,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 27657,
+          "seats": 0
+        }
+      ]
+    },
+    "71": {
+      "totalValidVotes": 1409946,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 449675,
+          "seats": 2
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 217265,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 163775,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 150989,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 146007,
+          "seats": 1
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 91875,
+          "seats": 0
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 69628,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 41434,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 31601,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 23930,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 15115,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 8652,
+          "seats": 0
+        }
+      ]
+    },
+    "72": {
+      "totalValidVotes": 1424748,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 274610,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 182217,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 174006,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 171289,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 143106,
+          "seats": 1
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 123646,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 97049,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 83990,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 71783,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 52099,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 26087,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 24866,
+          "seats": 0
+        }
+      ]
+    },
+    "73": {
+      "totalValidVotes": 4404165,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 884841,
+          "seats": 5
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 660262,
+          "seats": 3
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 489905,
+          "seats": 3
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 406880,
+          "seats": 3
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 387784,
+          "seats": 3
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 338966,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 316421,
+          "seats": 2
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 313515,
+          "seats": 2
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 286724,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 168830,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 92377,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 57660,
+          "seats": 0
+        }
+      ]
+    },
+    "74": {
+      "totalValidVotes": 1180733,
+      "parties": [
+        {
+          "partyCode": "PAN",
+          "votes": 271231,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 178294,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 126764,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 123957,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 99140,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 97056,
+          "seats": 0
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 90363,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 60177,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 58772,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 40315,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 26699,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 7965,
+          "seats": 0
+        }
+      ]
+    },
+    "75": {
+      "totalValidVotes": 636654,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 310790,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 49342,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 47662,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 41222,
+          "seats": 0
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 40606,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 36640,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 31114,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 26499,
+          "seats": 0
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 20930,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 16172,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 13285,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 2392,
+          "seats": 0
+        }
+      ]
+    },
+    "76": {
+      "totalValidVotes": 659966,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 123048,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 119801,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 98461,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 93977,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 50166,
+          "seats": 0
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 41678,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 35619,
+          "seats": 0
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 33587,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 22253,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 21261,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 13823,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 6292,
+          "seats": 0
+        }
+      ]
+    },
+    "81": {
+      "totalValidVotes": 927338,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 192731,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 162549,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 130794,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 113294,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 107443,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 66517,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 49528,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 27702,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 27120,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 26473,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 14541,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 8646,
+          "seats": 0
+        }
+      ]
+    },
+    "82": {
+      "totalValidVotes": 627645,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 122504,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 85413,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 77099,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 71757,
+          "seats": 0
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 65357,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 50587,
+          "seats": 0
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 45594,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 30180,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 23345,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 22655,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 20000,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 13154,
+          "seats": 0
+        }
+      ]
+    },
+    "91": {
+      "totalValidVotes": 2963280,
+      "parties": [
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 700150,
+          "seats": 2
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 491591,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 303396,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 298176,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 257767,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 251772,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 193145,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 159653,
+          "seats": 1
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 135257,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 105766,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 50342,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 16265,
+          "seats": 0
+        }
+      ]
+    },
+    "92": {
+      "totalValidVotes": 573725,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 160242,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 143869,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 89334,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 45242,
+          "seats": 0
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 30175,
+          "seats": 0
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 27401,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 18174,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 17430,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 13961,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 11325,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 10760,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 5812,
+          "seats": 0
+        }
+      ]
+    }
+  },
+  "2019": {
+    "11": {
+      "totalValidVotes": 2562479,
+      "parties": [
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 413438,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 376784,
+          "seats": 2
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 325421,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 318202,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 215520,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 209011,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 186314,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 177009,
+          "seats": 0
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 111381,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 66447,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 66024,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 28922,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 25686,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 18266,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 15583,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 8471,
+          "seats": 0
+        }
+      ]
+    },
+    "12": {
+      "totalValidVotes": 6704439,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 1404548,
+          "seats": 7
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 904054,
+          "seats": 4
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 878693,
+          "seats": 4
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 819485,
+          "seats": 4
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 634787,
+          "seats": 4
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 520824,
+          "seats": 3
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 391489,
+          "seats": 3
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 286791,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 247298,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 205905,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 125842,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 99682,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 90102,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 57919,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 19060,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 17960,
+          "seats": 0
+        }
+      ]
+    },
+    "13": {
+      "totalValidVotes": 2727387,
+      "parties": [
+        {
+          "partyCode": "GERINDRA",
+          "votes": 560835,
+          "seats": 3
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 412483,
+          "seats": 3
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 371058,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 356294,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 206432,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 202182,
+          "seats": 2
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 141865,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 134232,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 88961,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 55667,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 47790,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 45873,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 43510,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 38373,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 17510,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 4322,
+          "seats": 0
+        }
+      ]
+    },
+    "14": {
+      "totalValidVotes": 2921229,
+      "parties": [
+        {
+          "partyCode": "GERINDRA",
+          "votes": 386835,
+          "seats": 2
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 378913,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 371455,
+          "seats": 2
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 351931,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 326694,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 282902,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 187154,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 169663,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 163076,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 76762,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 71459,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 67161,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 37681,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 29515,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 14318,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 5710,
+          "seats": 0
+        }
+      ]
+    },
+    "15": {
+      "totalValidVotes": 1786074,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 360297,
+          "seats": 2
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 233633,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 224103,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 196085,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 156812,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 124126,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 120092,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 103280,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 81049,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 55752,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 50770,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 37461,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 18212,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 13944,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 7857,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 2601,
+          "seats": 0
+        }
+      ]
+    },
+    "16": {
+      "totalValidVotes": 4335825,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 671290,
+          "seats": 3
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 648303,
+          "seats": 3
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 641144,
+          "seats": 3
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 543675,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 396609,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 317657,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 268712,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 266130,
+          "seats": 1
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 121328,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 117147,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 111499,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 86437,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 56173,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 50496,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 29097,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 10128,
+          "seats": 0
+        }
+      ]
+    },
+    "17": {
+      "totalValidVotes": 986984,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 137006,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 136581,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 130846,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 121990,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 98952,
+          "seats": 0
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 94172,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 76751,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 38426,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 37657,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 30394,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 23633,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 17759,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 16392,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 10633,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 8210,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 7582,
+          "seats": 0
+        }
+      ]
+    },
+    "18": {
+      "totalValidVotes": 4345719,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 887416,
+          "seats": 5
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 509014,
+          "seats": 3
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 491786,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 488838,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 433087,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 365723,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 340867,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 336788,
+          "seats": 2
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 133263,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 112108,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 95299,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 58891,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 40637,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 27781,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 15522,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 8699,
+          "seats": 0
+        }
+      ]
+    },
+    "19": {
+      "totalValidVotes": 682168,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 169644,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 101681,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 83447,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 75153,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 58426,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 37524,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 36554,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 34280,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 19227,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 16029,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 14830,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 13193,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 12084,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 4639,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 3722,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 1735,
+          "seats": 0
+        }
+      ]
+    },
+    "21": {
+      "totalValidVotes": 919399,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 173998,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 148887,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 123341,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 101265,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 80344,
+          "seats": 0
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 77798,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 76884,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 34342,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 20580,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 19259,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 18256,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 16073,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 16054,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 7534,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 3790,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 994,
+          "seats": 0
+        }
+      ]
+    },
+    "31": {
+      "totalValidVotes": 6650289,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 1625042,
+          "seats": 7
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 1116705,
+          "seats": 5
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 988859,
+          "seats": 3
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 583071,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 412843,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 360303,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 334660,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 322764,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 304163,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 197751,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 178631,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 84770,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 63245,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 47834,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 16804,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 12844,
+          "seats": 0
+        }
+      ]
+    },
+    "32": {
+      "totalValidVotes": 24416196,
+      "parties": [
+        {
+          "partyCode": "GERINDRA",
+          "votes": 4320050,
+          "seats": 17
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 3510525,
+          "seats": 13
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 3286606,
+          "seats": 13
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 3226962,
+          "seats": 14
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 1896257,
+          "seats": 8
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 1830565,
+          "seats": 10
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 1690821,
+          "seats": 8
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 1213414,
+          "seats": 5
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 1111362,
+          "seats": 3
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 695083,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 564942,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 401835,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 271204,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 236304,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 114894,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 45372,
+          "seats": 0
+        }
+      ]
+    },
+    "33": {
+      "totalValidVotes": 19418014,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 5769664,
+          "seats": 26
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 2726730,
+          "seats": 13
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 2381565,
+          "seats": 11
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 1701310,
+          "seats": 8
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 1496325,
+          "seats": 5
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 1132420,
+          "seats": 5
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 1116942,
+          "seats": 5
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 971139,
+          "seats": 4
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 832010,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 418942,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 321298,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 249806,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 166774,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 66273,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 45278,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 21538,
+          "seats": 0
+        }
+      ]
+    },
+    "34": {
+      "totalValidVotes": 2184355,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 654088,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 264698,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 237731,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 229815,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 191346,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 166680,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 152903,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 62708,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 62357,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 60611,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 45347,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 27364,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 9378,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 8675,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 6987,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 3667,
+          "seats": 0
+        }
+      ]
+    },
+    "35": {
+      "totalValidVotes": 22069539,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 4319666,
+          "seats": 20
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 4198551,
+          "seats": 19
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 2408607,
+          "seats": 11
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 2256056,
+          "seats": 11
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 2190169,
+          "seats": 9
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 1841145,
+          "seats": 7
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 1209375,
+          "seats": 5
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 1192976,
+          "seats": 3
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 862840,
+          "seats": 2
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 479577,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 329621,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 327817,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 244329,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 93717,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 80169,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 34924,
+          "seats": 0
+        }
+      ]
+    },
+    "36": {
+      "totalValidVotes": 5833764,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 914719,
+          "seats": 5
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 876588,
+          "seats": 4
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 683558,
+          "seats": 3
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 678040,
+          "seats": 3
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 553391,
+          "seats": 3
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 447805,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 350025,
+          "seats": 2
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 313012,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 307248,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 196190,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 164920,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 151477,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 108965,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 51416,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 25925,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 10485,
+          "seats": 0
+        }
+      ]
+    },
+    "51": {
+      "totalValidVotes": 2313366,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 1257590,
+          "seats": 6
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 382607,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 118830,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 109600,
+          "seats": 0
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 102966,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 84012,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 55399,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 49695,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 42158,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 39024,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 36467,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 12195,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 8825,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 8136,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 3417,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 2445,
+          "seats": 0
+        }
+      ]
+    },
+    "52": {
+      "totalValidVotes": 2670901,
+      "parties": [
+        {
+          "partyCode": "GERINDRA",
+          "votes": 443321,
+          "seats": 2
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 334570,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 293473,
+          "seats": 2
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 217804,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 207732,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 200435,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 195394,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 190262,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 161405,
+          "seats": 1
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 118515,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 102095,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 73290,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 63701,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 32648,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 24162,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 12094,
+          "seats": 0
+        }
+      ]
+    },
+    "53": {
+      "totalValidVotes": 2571216,
+      "parties": [
+        {
+          "partyCode": "NASDEM",
+          "votes": 510574,
+          "seats": 3
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 450635,
+          "seats": 3
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 365266,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 202100,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 199250,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 158618,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 141282,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 135946,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 126106,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 73991,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 69857,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 52239,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 30420,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 29665,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 16115,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 9152,
+          "seats": 0
+        }
+      ]
+    },
+    "61": {
+      "totalValidVotes": 2729877,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 786796,
+          "seats": 4
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 273400,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 271941,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 264506,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 202689,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 191462,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 173880,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 167591,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 111178,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 82728,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 80680,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 58200,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 30145,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 12590,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 11161,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 10930,
+          "seats": 0
+        }
+      ]
+    },
+    "62": {
+      "totalValidVotes": 1202839,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 354331,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 166602,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 128436,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 101452,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 87504,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 80193,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 69565,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 63865,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 46078,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 37110,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 26073,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 12914,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 11941,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 9076,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 4759,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 2940,
+          "seats": 0
+        }
+      ]
+    },
+    "63": {
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "seats": 3
+        },
+        {
+          "partyCode": "GERINDRA",
+          "seats": 2
+        },
+        {
+          "partyCode": "GOLKAR",
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "seats": 0
+        }
+      ]
+    },
+    "64": {
+      "totalValidVotes": 1742547,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 350829,
+          "seats": 2
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 333404,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 194259,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 159557,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 137593,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 112987,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 98401,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 95401,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 78000,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 67635,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 41907,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 28034,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 24247,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 12558,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 4852,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 2883,
+          "seats": 0
+        }
+      ]
+    },
+    "65": {
+      "totalValidVotes": 328126,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 73880,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 62971,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 37616,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 25700,
+          "seats": 0
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 24794,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 21718,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 21391,
+          "seats": 0
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 17480,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 11790,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 9317,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 7725,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 4851,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 4437,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 2239,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 1209,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 1008,
+          "seats": 0
+        }
+      ]
+    },
+    "71": {
+      "totalValidVotes": 1479369,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 564703,
+          "seats": 3
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 248666,
+          "seats": 2
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 236697,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 80732,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 69943,
+          "seats": 0
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 61811,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 51437,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 37630,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 27990,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 26953,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 20221,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 17530,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 17453,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 10005,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 3862,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 3736,
+          "seats": 0
+        }
+      ]
+    },
+    "72": {
+      "totalValidVotes": 1550324,
+      "parties": [
+        {
+          "partyCode": "NASDEM",
+          "votes": 271513,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 207117,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 194712,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 165504,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 127562,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 97608,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 96004,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 95900,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 73881,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 58938,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 41019,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 37877,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 31837,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 26818,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 20377,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 3657,
+          "seats": 0
+        }
+      ]
+    },
+    "73": {
+      "totalValidVotes": 4659502,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 833382,
+          "seats": 4
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 684533,
+          "seats": 4
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 645464,
+          "seats": 3
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 418440,
+          "seats": 3
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 398047,
+          "seats": 2
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 380029,
+          "seats": 3
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 338093,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 259970,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 247798,
+          "seats": 1
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 142521,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 132611,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 65536,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 43249,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 36289,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 25857,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 7683,
+          "seats": 0
+        }
+      ]
+    },
+    "74": {
+      "totalValidVotes": 1287972,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 203794,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 183197,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 163684,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 158621,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 151872,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 95522,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 85423,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 65284,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 60902,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 33562,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 28189,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 20479,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 17680,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 12039,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 6226,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 1498,
+          "seats": 0
+        }
+      ]
+    },
+    "75": {
+      "totalValidVotes": 688445,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 194660,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 169509,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 87748,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 69784,
+          "seats": 0
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 37423,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 35212,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 24945,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 21840,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 13786,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 11973,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 7041,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 6116,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 3491,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 2390,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 1937,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 590,
+          "seats": 0
+        }
+      ]
+    },
+    "76": {
+      "totalValidVotes": 698697,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 214365,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 96845,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 93943,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 83499,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 52186,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 43449,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 28872,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 26208,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 11849,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 10601,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 10219,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 10092,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 6463,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 4510,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 4055,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 1541,
+          "seats": 0
+        }
+      ]
+    },
+    "81": {
+      "totalValidVotes": 949492,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 197648,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 118307,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 97765,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 94298,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 93158,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 62220,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 58701,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 45426,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 41045,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 38375,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 33796,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 28942,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 17380,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 9758,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 7613,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 5060,
+          "seats": 0
+        }
+      ]
+    },
+    "82": {
+      "totalValidVotes": 622755,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 111296,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 93484,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 62549,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 57339,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 57293,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 43180,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 37781,
+          "seats": 0
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 33333,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 28025,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 24080,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 21877,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 16200,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 15861,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 8505,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 8425,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 3527,
+          "seats": 0
+        }
+      ]
+    },
+    "91": {
+      "totalValidVotes": 3314858,
+      "parties": [
+        {
+          "partyCode": "NASDEM",
+          "votes": 787753,
+          "seats": 3
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 443393,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 399011,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 368618,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 313485,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 286762,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 221282,
+          "seats": 1
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 89401,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 89035,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 80318,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 75349,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 52143,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 45435,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 25433,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 21600,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 15840,
+          "seats": 0
+        }
+      ]
+    },
+    "92": {
+      "totalValidVotes": 601107,
+      "parties": [
+        {
+          "partyCode": "NASDEM",
+          "votes": 109157,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 103012,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 101713,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 73961,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 68147,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 29843,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 26429,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 20010,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 16162,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 15750,
+          "seats": 0
+        },
+        {
+          "partyCode": "BERKARYA",
+          "votes": 11016,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 8089,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 6919,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 3891,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKPI",
+          "votes": 3617,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 3391,
+          "seats": 0
+        }
+      ]
+    }
+  },
+  "2024": {
+    "11": {
+      "totalValidVotes": 3047729,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 594213,
+          "seats": 3
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 587783,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 328147,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 268710,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 263602,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 230749,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 224351,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 223721,
+          "seats": 2
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 153336,
+          "seats": 1
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 54024,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 25134,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 22809,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 19625,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 18274,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 12823,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 8349,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 8051,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 4028,
+          "seats": 0
+        }
+      ]
+    },
+    "12": {
+      "totalValidVotes": 7408581,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 1712074,
+          "seats": 8
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 1383049,
+          "seats": 6
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 915612,
+          "seats": 4
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 847835,
+          "seats": 3
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 602832,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 551861,
+          "seats": 3
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 434162,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 359489,
+          "seats": 2
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 176044,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 104735,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 93038,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 71905,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 44403,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 34956,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 33520,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 18262,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 16823,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 7981,
+          "seats": 0
+        }
+      ]
+    },
+    "13": {
+      "totalValidVotes": 2920240,
+      "parties": [
+        {
+          "partyCode": "NASDEM",
+          "votes": 475586,
+          "seats": 3
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 398477,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 382856,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 381879,
+          "seats": 2
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 354500,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 258149,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 245407,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 150872,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 124748,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 34396,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 22606,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 22251,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 15385,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 14340,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 14330,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 11251,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 9379,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 3828,
+          "seats": 0
+        }
+      ]
+    },
+    "14": {
+      "totalValidVotes": 3392259,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 770977,
+          "seats": 3
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 431177,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 384023,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 351942,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 301207,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 285992,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 266112,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 252177,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 98679,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 77468,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 63693,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 22559,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 21162,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 18235,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 18143,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 13761,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 8976,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 5976,
+          "seats": 0
+        }
+      ]
+    },
+    "15": {
+      "totalValidVotes": 1951724,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 341039,
+          "seats": 2
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 318124,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 241351,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 212847,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 197962,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 176441,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 166290,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 107298,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 58114,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 34649,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 28989,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 15627,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 12783,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 12233,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 10135,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 6729,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 5656,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 5457,
+          "seats": 0
+        }
+      ]
+    },
+    "16": {
+      "totalValidVotes": 4874788,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 857642,
+          "seats": 3
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 834680,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 766894,
+          "seats": 3
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 480801,
+          "seats": 2
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 471907,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 441748,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 329836,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 294282,
+          "seats": 2
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 92503,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 55280,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 52535,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 47948,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 33234,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 28911,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 22808,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 21537,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 21469,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 20773,
+          "seats": 0
+        }
+      ]
+    },
+    "17": {
+      "totalValidVotes": 1151620,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 324563,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 188346,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 180917,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 141236,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 88087,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 70344,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 30979,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 29775,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 27368,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 17214,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 11688,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 10400,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 9460,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 6399,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 4300,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 3838,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 3663,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 3043,
+          "seats": 0
+        }
+      ]
+    },
+    "18": {
+      "totalValidVotes": 4651843,
+      "parties": [
+        {
+          "partyCode": "GERINDRA",
+          "votes": 806836,
+          "seats": 4
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 724522,
+          "seats": 3
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 670414,
+          "seats": 3
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 579246,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 443412,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 428727,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 364060,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 303074,
+          "seats": 2
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 93721,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 69049,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 48052,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 27738,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 27631,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 20815,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 15393,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 14021,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 8431,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 6701,
+          "seats": 0
+        }
+      ]
+    },
+    "19": {
+      "totalValidVotes": 771812,
+      "parties": [
+        {
+          "partyCode": "GERINDRA",
+          "votes": 172949,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 168406,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 115549,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 80472,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 72724,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 36444,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 33169,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 22996,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 16873,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 12288,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 8091,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 7219,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 7149,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 6870,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 5072,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 2503,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 2040,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 998,
+          "seats": 0
+        }
+      ]
+    },
+    "21": {
+      "totalValidVotes": 1053995,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 166147,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 164310,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 151776,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 149222,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 108797,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 88253,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 57472,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 54173,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 45857,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 14004,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 10629,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 10084,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 9927,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 9870,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 5193,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 3206,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 3155,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 1920,
+          "seats": 0
+        }
+      ]
+    },
+    "31": {
+      "totalValidVotes": 6643110,
+      "parties": [
+        {
+          "partyCode": "PKS",
+          "votes": 1195699,
+          "seats": 5
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 1044203,
+          "seats": 4
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 753569,
+          "seats": 3
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 684464,
+          "seats": 2
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 611570,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 496407,
+          "seats": 3
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 475924,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 440873,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 381130,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 186289,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 145003,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 72292,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 47569,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 45244,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 23277,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 14735,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 13284,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 11578,
+          "seats": 0
+        }
+      ]
+    },
+    "32": {
+      "totalValidVotes": 26291451,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 4292082,
+          "seats": 17
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 4197376,
+          "seats": 16
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 3505195,
+          "seats": 12
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 2983432,
+          "seats": 11
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 2876990,
+          "seats": 13
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 1885165,
+          "seats": 8
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 1779410,
+          "seats": 6
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 1689044,
+          "seats": 8
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 1197820,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 744452,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 273661,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 239510,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 220788,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 108348,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 107768,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 89013,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 60915,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 40482,
+          "seats": 0
+        }
+      ]
+    },
+    "33": {
+      "totalValidVotes": 20944956,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 5846493,
+          "seats": 23
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 2672345,
+          "seats": 10
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 2648583,
+          "seats": 12
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 2279011,
+          "seats": 10
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 1492537,
+          "seats": 7
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 1372784,
+          "seats": 5
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 1321849,
+          "seats": 7
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 1137194,
+          "seats": 3
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 874749,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 580751,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 162035,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 148895,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 146358,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 86023,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 85528,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 41317,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 25133,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 23371,
+          "seats": 0
+        }
+      ]
+    },
+    "34": {
+      "totalValidVotes": 2294779,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 593969,
+          "seats": 2
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 302845,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 272165,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 272061,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 245627,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 198662,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 130830,
+          "seats": 1
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 71998,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 55510,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 49203,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 47873,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 15343,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 12732,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 10234,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 4792,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 4047,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 3638,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 3250,
+          "seats": 0
+        }
+      ]
+    },
+    "35": {
+      "totalValidVotes": 23543816,
+      "parties": [
+        {
+          "partyCode": "PKB",
+          "votes": 4155974,
+          "seats": 18
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 4061311,
+          "seats": 19
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 3257120,
+          "seats": 14
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 3232091,
+          "seats": 13
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 1885622,
+          "seats": 7
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 1621938,
+          "seats": 6
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 1485591,
+          "seats": 5
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 1203974,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 1129864,
+          "seats": 5
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 712594,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 267736,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 141856,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 109212,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 88531,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 75565,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 47063,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 38916,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 28858,
+          "seats": 0
+        }
+      ]
+    },
+    "36": {
+      "totalValidVotes": 6483737,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 931287,
+          "seats": 4
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 818889,
+          "seats": 4
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 706910,
+          "seats": 3
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 691680,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 686633,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 627669,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 581136,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 570544,
+          "seats": 3
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 290034,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 246571,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 100537,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 63610,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 60014,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 30018,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 27665,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 21992,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 18939,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 9609,
+          "seats": 0
+        }
+      ]
+    },
+    "51": {
+      "totalValidVotes": 2460686,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 1290884,
+          "seats": 5
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 333521,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 295313,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 174476,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 147678,
+          "seats": 1
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 60722,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 41628,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 23731,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 23681,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 19145,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 10531,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 9851,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 9045,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 6683,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 5232,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 4600,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 2160,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 1805,
+          "seats": 0
+        }
+      ]
+    },
+    "52": {
+      "totalValidVotes": 3006171,
+      "parties": [
+        {
+          "partyCode": "GERINDRA",
+          "votes": 434155,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 355767,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 319321,
+          "seats": 2
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 285263,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 262809,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 247854,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 220438,
+          "seats": 1
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 212059,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 191199,
+          "seats": 0
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 188688,
+          "seats": 1
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 116859,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 46894,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 33991,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 28195,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 22900,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 19289,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 11008,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 9482,
+          "seats": 0
+        }
+      ]
+    },
+    "53": {
+      "totalValidVotes": 2801119,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 447442,
+          "seats": 2
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 378996,
+          "seats": 3
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 342001,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 338882,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 325202,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 255277,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 212854,
+          "seats": 1
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 129806,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 86108,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 75551,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 55982,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 54666,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 25520,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 24872,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 19101,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 16808,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 8306,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 3745,
+          "seats": 0
+        }
+      ]
+    },
+    "61": {
+      "totalValidVotes": 3006307,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 735610,
+          "seats": 4
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 514489,
+          "seats": 2
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 409076,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 344780,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 189531,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 174943,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 137253,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 134940,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 114087,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 78850,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 74358,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 45082,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 16224,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 11350,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 10091,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 6956,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 4706,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 3981,
+          "seats": 0
+        }
+      ]
+    },
+    "62": {
+      "totalValidVotes": 1354625,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 295749,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 193871,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 177420,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 154407,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 148111,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 134107,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 111434,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 29778,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 27215,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 21397,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 18776,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 13786,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 8095,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 6427,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 4853,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 4042,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 3143,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 2014,
+          "seats": 0
+        }
+      ]
+    },
+    "63": {
+      "totalValidVotes": 2229816,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 501255,
+          "seats": 3
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 372607,
+          "seats": 3
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 296156,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 247043,
+          "seats": 2
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 169987,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 146780,
+          "seats": 0
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 145204,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 138909,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 102434,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 23419,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 20058,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 14806,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 13250,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 11600,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 9424,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 7585,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 6727,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 2572,
+          "seats": 0
+        }
+      ]
+    },
+    "64": {
+      "totalValidVotes": 2014025,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 538115,
+          "seats": 2
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 307260,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 252717,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 227808,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 145571,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 143870,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 111139,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 110797,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 56317,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 38593,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 29911,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 13264,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 10269,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 8640,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 5790,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 5156,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 5145,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 3663,
+          "seats": 0
+        }
+      ]
+    },
+    "65": {
+      "totalValidVotes": 379458,
+      "parties": [
+        {
+          "partyCode": "GERINDRA",
+          "votes": 126507,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 75556,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 63863,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 31201,
+          "seats": 0
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 24992,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 12354,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 8208,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 8197,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 7795,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 7607,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 3622,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 3053,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 1688,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 1385,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 1273,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 988,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 815,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 354,
+          "seats": 0
+        }
+      ]
+    },
+    "71": {
+      "totalValidVotes": 1533523,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 511270,
+          "seats": 2
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 327386,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 203548,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 174555,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 116781,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 80753,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 28665,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 21438,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 17317,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 16639,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 10248,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 8242,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 5802,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 3766,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 2980,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 1684,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 1628,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 821,
+          "seats": 0
+        }
+      ]
+    },
+    "72": {
+      "totalValidVotes": 1718343,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 330971,
+          "seats": 2
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 256799,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 254852,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 242635,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 136625,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 117811,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 101659,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 100727,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 31068,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 30995,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 28346,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 20981,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 20924,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 12354,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 10713,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 9865,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 6094,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 4924,
+          "seats": 0
+        }
+      ]
+    },
+    "73": {
+      "totalValidVotes": 5081429,
+      "parties": [
+        {
+          "partyCode": "GERINDRA",
+          "votes": 960959,
+          "seats": 5
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 876055,
+          "seats": 5
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 814225,
+          "seats": 4
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 416719,
+          "seats": 2
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 411431,
+          "seats": 3
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 384394,
+          "seats": 2
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 382292,
+          "seats": 0
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 309000,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 268777,
+          "seats": 2
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 87631,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 55875,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 27990,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 25209,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 18576,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 12048,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 11938,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 9408,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 8902,
+          "seats": 0
+        }
+      ]
+    },
+    "74": {
+      "totalValidVotes": 1458333,
+      "parties": [
+        {
+          "partyCode": "GERINDRA",
+          "votes": 233478,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 207276,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 175830,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 159282,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 149788,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 147175,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 118350,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 110211,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 63092,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 20942,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 19723,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 17140,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 7402,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 7380,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 7274,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 6006,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 4850,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 3134,
+          "seats": 0
+        }
+      ]
+    },
+    "75": {
+      "totalValidVotes": 741783,
+      "parties": [
+        {
+          "partyCode": "NASDEM",
+          "votes": 227533,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 163074,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 145152,
+          "seats": 1
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 70720,
+          "seats": 0
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 46225,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 17590,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 15149,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 14897,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 14090,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 5984,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 5843,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 5348,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 2469,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 2447,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 1663,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 1552,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 1077,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 970,
+          "seats": 0
+        }
+      ]
+    },
+    "76": {
+      "totalValidVotes": 785247,
+      "parties": [
+        {
+          "partyCode": "NASDEM",
+          "votes": 142496,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 132714,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 104369,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 101646,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 99793,
+          "seats": 0
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 76133,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 50561,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 22460,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 15003,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 13083,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 9260,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 5966,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 3328,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 2730,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 2168,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 1377,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 1365,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 795,
+          "seats": 0
+        }
+      ]
+    },
+    "81": {
+      "totalValidVotes": 1040166,
+      "parties": [
+        {
+          "partyCode": "PAN",
+          "votes": 178770,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 146716,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 145777,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 136989,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 91835,
+          "seats": 0
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 87508,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 70184,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 53963,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 25690,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 22322,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 20904,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 14325,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 13391,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 11111,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 8616,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 6193,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 4514,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 1358,
+          "seats": 0
+        }
+      ]
+    },
+    "82": {
+      "totalValidVotes": 699302,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 146937,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 128475,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 70736,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 64089,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 62457,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 58175,
+          "seats": 0
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 56105,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 34575,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 18311,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 10914,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 8859,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 8395,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 6777,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 6574,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 5929,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 5594,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 3894,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 2506,
+          "seats": 0
+        }
+      ]
+    },
+    "91": {
+      "totalValidVotes": 658922,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 154548,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 110961,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 99418,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 71845,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 42346,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 41911,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 27887,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 25718,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 21789,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 12836,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 11149,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 9292,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 8029,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 5468,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 5237,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 4289,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 3133,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 3066,
+          "seats": 0
+        }
+      ]
+    },
+    "92": {
+      "totalValidVotes": 321066,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 95883,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 52964,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 43951,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 32041,
+          "seats": 0
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 27411,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 19729,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 13212,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 8747,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 5192,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 4191,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 3718,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 3369,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 2764,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 2046,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 1962,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 1545,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 1456,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 885,
+          "seats": 0
+        }
+      ]
+    },
+    "93": {
+      "totalValidVotes": 303385,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 54416,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 50241,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 42490,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 31576,
+          "seats": 0
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 30449,
+          "seats": 0
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 27454,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 27285,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 7343,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 5387,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 5340,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 5311,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 4830,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 4257,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 1932,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 1826,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 1587,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 1019,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 642,
+          "seats": 0
+        }
+      ]
+    },
+    "94": {
+      "totalValidVotes": 1126683,
+      "parties": [
+        {
+          "partyCode": "PDIP",
+          "votes": 289738,
+          "seats": 1
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 256718,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 157978,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 119726,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 90402,
+          "seats": 0
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 50644,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 41570,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 30158,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 24173,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 16978,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 11538,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 7660,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 6918,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 6465,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 5152,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 4813,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 3796,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 2256,
+          "seats": 0
+        }
+      ]
+    },
+    "95": {
+      "totalValidVotes": 1306436,
+      "parties": [
+        {
+          "partyCode": "NASDEM",
+          "votes": 482364,
+          "seats": 1
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 202726,
+          "seats": 1
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 189105,
+          "seats": 1
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 145353,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 96512,
+          "seats": 0
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 90227,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 47981,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 21505,
+          "seats": 0
+        },
+        {
+          "partyCode": "GOLKAR",
+          "votes": 9866,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 7118,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 6750,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 2746,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 1640,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 1256,
+          "seats": 0
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 1064,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 97,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 66,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 60,
+          "seats": 0
+        }
+      ]
+    },
+    "96": {
+      "totalValidVotes": 340028,
+      "parties": [
+        {
+          "partyCode": "GOLKAR",
+          "votes": 102786,
+          "seats": 1
+        },
+        {
+          "partyCode": "DEMOKRAT",
+          "votes": 44618,
+          "seats": 1
+        },
+        {
+          "partyCode": "NASDEM",
+          "votes": 40959,
+          "seats": 1
+        },
+        {
+          "partyCode": "GERINDRA",
+          "votes": 34439,
+          "seats": 0
+        },
+        {
+          "partyCode": "PDIP",
+          "votes": 28702,
+          "seats": 0
+        },
+        {
+          "partyCode": "PAN",
+          "votes": 24203,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKS",
+          "votes": 15650,
+          "seats": 0
+        },
+        {
+          "partyCode": "HANURA",
+          "votes": 12416,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKB",
+          "votes": 10607,
+          "seats": 0
+        },
+        {
+          "partyCode": "PSI",
+          "votes": 9355,
+          "seats": 0
+        },
+        {
+          "partyCode": "PERINDO",
+          "votes": 4601,
+          "seats": 0
+        },
+        {
+          "partyCode": "PPP",
+          "votes": 3373,
+          "seats": 0
+        },
+        {
+          "partyCode": "GELORA",
+          "votes": 2141,
+          "seats": 0
+        },
+        {
+          "partyCode": "BURUH",
+          "votes": 2099,
+          "seats": 0
+        },
+        {
+          "partyCode": "GARUDA",
+          "votes": 1712,
+          "seats": 0
+        },
+        {
+          "partyCode": "PBB",
+          "votes": 1003,
+          "seats": 0
+        },
+        {
+          "partyCode": "PKN",
+          "votes": 946,
+          "seats": 0
+        },
+        {
+          "partyCode": "UMMAT",
+          "votes": 418,
+          "seats": 0
+        }
+      ]
+    }
+  }
+}

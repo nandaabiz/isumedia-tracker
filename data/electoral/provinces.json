@@ -1,0 +1,382 @@
+[
+  {
+    "code": "11",
+    "name": "Aceh",
+    "island": "Sumatera",
+    "capital": "Banda Aceh",
+    "coordinates": [
+      5.55,
+      95.3175
+    ]
+  },
+  {
+    "code": "12",
+    "name": "Sumatera Utara",
+    "island": "Sumatera",
+    "capital": "Medan",
+    "coordinates": [
+      3.5894,
+      98.6739
+    ]
+  },
+  {
+    "code": "13",
+    "name": "Sumatera Barat",
+    "island": "Sumatera",
+    "capital": "Padang",
+    "coordinates": [
+      -0.95,
+      100.3531
+    ]
+  },
+  {
+    "code": "14",
+    "name": "Riau",
+    "island": "Sumatera",
+    "capital": "Pekanbaru",
+    "coordinates": [
+      0.5092,
+      101.4453
+    ]
+  },
+  {
+    "code": "15",
+    "name": "Jambi",
+    "island": "Sumatera",
+    "capital": "Jambi",
+    "coordinates": [
+      -1.59,
+      103.61
+    ]
+  },
+  {
+    "code": "16",
+    "name": "Sumatera Selatan",
+    "island": "Sumatera",
+    "capital": "Palembang",
+    "coordinates": [
+      -2.9861,
+      104.7556
+    ]
+  },
+  {
+    "code": "17",
+    "name": "Bengkulu",
+    "island": "Sumatera",
+    "capital": "Bengkulu",
+    "coordinates": [
+      -3.7956,
+      102.2592
+    ]
+  },
+  {
+    "code": "18",
+    "name": "Lampung",
+    "island": "Sumatera",
+    "capital": "Bandar Lampung",
+    "coordinates": [
+      -5.45,
+      105.2667
+    ]
+  },
+  {
+    "code": "19",
+    "name": "Kepulauan Bangka Belitung",
+    "island": "Sumatera",
+    "capital": "Pangkalpinang",
+    "coordinates": [
+      -2.1333,
+      106.1167
+    ]
+  },
+  {
+    "code": "21",
+    "name": "Kepulauan Riau",
+    "island": "Sumatera",
+    "capital": "Tanjungpinang",
+    "coordinates": [
+      0.9188,
+      104.4554
+    ]
+  },
+  {
+    "code": "31",
+    "name": "DKI Jakarta",
+    "island": "Jawa",
+    "capital": "Jakarta",
+    "coordinates": [
+      -6.18,
+      106.83
+    ]
+  },
+  {
+    "code": "32",
+    "name": "Jawa Barat",
+    "island": "Jawa",
+    "capital": "Bandung",
+    "coordinates": [
+      -6.9219,
+      107.6069
+    ]
+  },
+  {
+    "code": "33",
+    "name": "Jawa Tengah",
+    "island": "Jawa",
+    "capital": "Semarang",
+    "coordinates": [
+      -6.99,
+      110.4225
+    ]
+  },
+  {
+    "code": "34",
+    "name": "DI Yogyakarta",
+    "island": "Jawa",
+    "capital": "Yogyakarta",
+    "coordinates": [
+      -7.8014,
+      110.3644
+    ]
+  },
+  {
+    "code": "35",
+    "name": "Jawa Timur",
+    "island": "Jawa",
+    "capital": "Surabaya",
+    "coordinates": [
+      -7.2458,
+      112.7378
+    ]
+  },
+  {
+    "code": "36",
+    "name": "Banten",
+    "island": "Jawa",
+    "capital": "Serang",
+    "coordinates": [
+      -6.12,
+      106.1503
+    ]
+  },
+  {
+    "code": "51",
+    "name": "Bali",
+    "island": "Bali-Nusa",
+    "capital": "Denpasar",
+    "coordinates": [
+      -8.6717,
+      115.2339
+    ]
+  },
+  {
+    "code": "52",
+    "name": "Nusa Tenggara Barat",
+    "island": "Bali-Nusa",
+    "capital": "Mataram",
+    "coordinates": [
+      -8.5833,
+      116.1167
+    ]
+  },
+  {
+    "code": "53",
+    "name": "Nusa Tenggara Timur",
+    "island": "Bali-Nusa",
+    "capital": "Kupang",
+    "coordinates": [
+      -10.1702,
+      123.6077
+    ]
+  },
+  {
+    "code": "61",
+    "name": "Kalimantan Barat",
+    "island": "Kalimantan",
+    "capital": "Pontianak",
+    "coordinates": [
+      -0.0206,
+      109.3414
+    ]
+  },
+  {
+    "code": "62",
+    "name": "Kalimantan Tengah",
+    "island": "Kalimantan",
+    "capital": "Palangka Raya",
+    "coordinates": [
+      -2.21,
+      113.92
+    ]
+  },
+  {
+    "code": "63",
+    "name": "Kalimantan Selatan",
+    "island": "Kalimantan",
+    "capital": "Banjarbaru",
+    "coordinates": [
+      -3.4425,
+      114.8325
+    ]
+  },
+  {
+    "code": "64",
+    "name": "Kalimantan Timur",
+    "island": "Kalimantan",
+    "capital": "Samarinda",
+    "coordinates": [
+      -0.5,
+      117.1378
+    ]
+  },
+  {
+    "code": "65",
+    "name": "Kalimantan Utara",
+    "island": "Kalimantan",
+    "capital": "Tanjung Selor",
+    "coordinates": [
+      2.85,
+      117.3833
+    ]
+  },
+  {
+    "code": "71",
+    "name": "Sulawesi Utara",
+    "island": "Sulawesi",
+    "capital": "Manado",
+    "coordinates": [
+      1.4931,
+      124.8413
+    ]
+  },
+  {
+    "code": "72",
+    "name": "Sulawesi Tengah",
+    "island": "Sulawesi",
+    "capital": "Palu",
+    "coordinates": [
+      -0.895,
+      119.8594
+    ]
+  },
+  {
+    "code": "73",
+    "name": "Sulawesi Selatan",
+    "island": "Sulawesi",
+    "capital": "Makassar",
+    "coordinates": [
+      -5.1331,
+      119.4136
+    ]
+  },
+  {
+    "code": "74",
+    "name": "Sulawesi Tenggara",
+    "island": "Sulawesi",
+    "capital": "Kendari",
+    "coordinates": [
+      -3.9907,
+      122.5086
+    ]
+  },
+  {
+    "code": "75",
+    "name": "Gorontalo",
+    "island": "Sulawesi",
+    "capital": "Gorontalo",
+    "coordinates": [
+      0.5422,
+      123.0614
+    ]
+  },
+  {
+    "code": "76",
+    "name": "Sulawesi Barat",
+    "island": "Sulawesi",
+    "capital": "Mamuju",
+    "coordinates": [
+      -2.6686,
+      118.8622
+    ]
+  },
+  {
+    "code": "81",
+    "name": "Maluku",
+    "island": "Maluku-Papua",
+    "capital": "Ambon",
+    "coordinates": [
+      -3.6967,
+      128.1783
+    ]
+  },
+  {
+    "code": "82",
+    "name": "Maluku Utara",
+    "island": "Maluku-Papua",
+    "capital": "Sofifi",
+    "coordinates": [
+      0.7244,
+      127.5806
+    ]
+  },
+  {
+    "code": "91",
+    "name": "Papua",
+    "island": "Maluku-Papua",
+    "capital": "Jayapura",
+    "coordinates": [
+      -2.533,
+      140.717
+    ]
+  },
+  {
+    "code": "92",
+    "name": "Papua Barat",
+    "island": "Maluku-Papua",
+    "capital": "Manokwari",
+    "coordinates": [
+      -0.8667,
+      134.0833
+    ]
+  },
+  {
+    "code": "93",
+    "name": "Papua Selatan",
+    "island": "Maluku-Papua",
+    "capital": "Merauke",
+    "coordinates": [
+      -8.4667,
+      140.3333
+    ]
+  },
+  {
+    "code": "94",
+    "name": "Papua Tengah",
+    "island": "Maluku-Papua",
+    "capital": "Nabire",
+    "coordinates": [
+      -3.3622,
+      135.5028
+    ]
+  },
+  {
+    "code": "95",
+    "name": "Papua Pegunungan",
+    "island": "Maluku-Papua",
+    "capital": "Wamena",
+    "coordinates": [
+      -4.0975,
+      138.9511
+    ]
+  },
+  {
+    "code": "96",
+    "name": "Papua Barat Daya",
+    "island": "Maluku-Papua",
+    "capital": "Sorong",
+    "coordinates": [
+      -0.8667,
+      131.25
+    ]
+  }
+]

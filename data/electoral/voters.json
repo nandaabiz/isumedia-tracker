@@ -1,0 +1,534 @@
+{
+  "2014": {
+    "11": {
+      "dpt": 3330719,
+      "turnoutPct": 61.88,
+      "turnoutVoters": 2061084
+    },
+    "12": {
+      "dpt": 9902948,
+      "turnoutPct": 64.18,
+      "turnoutVoters": 6356025
+    },
+    "13": {
+      "dpt": 3611551,
+      "turnoutPct": 65.19,
+      "turnoutVoters": 2354327
+    },
+    "14": {
+      "dpt": 4208306,
+      "turnoutPct": 64.39,
+      "turnoutVoters": 2709778
+    },
+    "15": {
+      "dpt": 2480927,
+      "turnoutPct": 71.85,
+      "turnoutVoters": 1782570
+    },
+    "16": {
+      "dpt": 5865025,
+      "turnoutPct": 71.45,
+      "turnoutVoters": 4190631
+    },
+    "17": {
+      "dpt": 1379067,
+      "turnoutPct": 69.9,
+      "turnoutVoters": 963992
+    },
+    "18": {
+      "dpt": 5976211,
+      "turnoutPct": 72.97,
+      "turnoutVoters": 4360992
+    },
+    "19": {
+      "dpt": 925058,
+      "turnoutPct": 66.93,
+      "turnoutVoters": 619174
+    },
+    "21": {
+      "dpt": 1323627,
+      "turnoutPct": 62.71,
+      "turnoutVoters": 830025
+    },
+    "31": {
+      "dpt": 7096168,
+      "turnoutPct": 76.69,
+      "turnoutVoters": 5441705
+    },
+    "32": {
+      "dpt": 33045082,
+      "turnoutPct": 72.6,
+      "turnoutVoters": 23990089
+    },
+    "33": {
+      "dpt": 27385217,
+      "turnoutPct": 71.82,
+      "turnoutVoters": 19668404
+    },
+    "34": {
+      "dpt": 2752275,
+      "turnoutPct": 81.57,
+      "turnoutVoters": 2245164
+    },
+    "35": {
+      "dpt": 30639897,
+      "turnoutPct": 72.4,
+      "turnoutVoters": 22184407
+    },
+    "36": {
+      "dpt": 7985599,
+      "turnoutPct": 70.77,
+      "turnoutVoters": 5651467
+    },
+    "51": {
+      "dpt": 2942282,
+      "turnoutPct": 73.66,
+      "turnoutVoters": 2167221
+    },
+    "52": {
+      "dpt": 3522679,
+      "turnoutPct": 72.96,
+      "turnoutVoters": 2569997
+    },
+    "53": {
+      "dpt": 3185121,
+      "turnoutPct": 71.4,
+      "turnoutVoters": 2274079
+    },
+    "61": {
+      "dpt": 3506277,
+      "turnoutPct": 74.78,
+      "turnoutVoters": 2621933
+    },
+    "62": {
+      "dpt": 1819970,
+      "turnoutPct": 64.5,
+      "turnoutVoters": 1173833
+    },
+    "63": {
+      "dpt": 2821261,
+      "turnoutPct": 68.05,
+      "turnoutVoters": 1919794
+    },
+    "64": {
+      "dpt": 2925330,
+      "turnoutPct": 64.73,
+      "turnoutVoters": 1893441
+    },
+    "71": {
+      "dpt": 1887975,
+      "turnoutPct": 71.5,
+      "turnoutVoters": 1349868
+    },
+    "72": {
+      "dpt": 1935646,
+      "turnoutPct": 72.73,
+      "turnoutVoters": 1407759
+    },
+    "73": {
+      "dpt": 6323711,
+      "turnoutPct": 67.6,
+      "turnoutVoters": 4274615
+    },
+    "74": {
+      "dpt": 1798732,
+      "turnoutPct": 63.36,
+      "turnoutVoters": 1139678
+    },
+    "75": {
+      "dpt": 794450,
+      "turnoutPct": 75.96,
+      "turnoutVoters": 603448
+    },
+    "76": {
+      "dpt": 887577,
+      "turnoutPct": 70.41,
+      "turnoutVoters": 624943
+    },
+    "81": {
+      "dpt": 1216296,
+      "turnoutPct": 72.47,
+      "turnoutVoters": 881448
+    },
+    "82": {
+      "dpt": 840253,
+      "turnoutPct": 67.36,
+      "turnoutVoters": 565970
+    },
+    "91": {
+      "dpt": 3238288,
+      "turnoutPct": 87.49,
+      "turnoutVoters": 2833245
+    },
+    "92": {
+      "dpt": 715462,
+      "turnoutPct": 74.95,
+      "turnoutVoters": 536270
+    }
+  },
+  "2019": {
+    "11": {
+      "dpt": 3523774,
+      "turnoutPct": 81.96,
+      "turnoutVoters": 2888260
+    },
+    "12": {
+      "dpt": 9786005,
+      "turnoutPct": 78.03,
+      "turnoutVoters": 7636226
+    },
+    "13": {
+      "dpt": 3718237,
+      "turnoutPct": 78.98,
+      "turnoutVoters": 2936719
+    },
+    "14": {
+      "dpt": 3863305,
+      "turnoutPct": 84.68,
+      "turnoutVoters": 3271530
+    },
+    "15": {
+      "dpt": 2475655,
+      "turnoutPct": 85.28,
+      "turnoutVoters": 2111328
+    },
+    "16": {
+      "dpt": 5877575,
+      "turnoutPct": 84.02,
+      "turnoutVoters": 4938585
+    },
+    "17": {
+      "dpt": 1399108,
+      "turnoutPct": 85.51,
+      "turnoutVoters": 1196349
+    },
+    "18": {
+      "dpt": 6074137,
+      "turnoutPct": 80.6,
+      "turnoutVoters": 4895585
+    },
+    "19": {
+      "dpt": 932569,
+      "turnoutPct": 86.52,
+      "turnoutVoters": 806891
+    },
+    "21": {
+      "dpt": 1229424,
+      "turnoutPct": 83.85,
+      "turnoutVoters": 1030868
+    },
+    "31": {
+      "dpt": 7761598,
+      "turnoutPct": 82.79,
+      "turnoutVoters": 6425574
+    },
+    "32": {
+      "dpt": 33276905,
+      "turnoutPct": 82.57,
+      "turnoutVoters": 27476079
+    },
+    "33": {
+      "dpt": 27896902,
+      "turnoutPct": 80.21,
+      "turnoutVoters": 22376465
+    },
+    "34": {
+      "dpt": 2731874,
+      "turnoutPct": 89.67,
+      "turnoutVoters": 2449679
+    },
+    "35": {
+      "dpt": 30912994,
+      "turnoutPct": 82.53,
+      "turnoutVoters": 25511241
+    },
+    "36": {
+      "dpt": 8112477,
+      "turnoutPct": 83.71,
+      "turnoutVoters": 6791166
+    },
+    "51": {
+      "dpt": 3130288,
+      "turnoutPct": 83.6,
+      "turnoutVoters": 2616810
+    },
+    "52": {
+      "dpt": 3667253,
+      "turnoutPct": 82.91,
+      "turnoutVoters": 3040686
+    },
+    "53": {
+      "dpt": 3391616,
+      "turnoutPct": 80.15,
+      "turnoutVoters": 2718464
+    },
+    "61": {
+      "dpt": 3687159,
+      "turnoutPct": 82.17,
+      "turnoutVoters": 3029909
+    },
+    "62": {
+      "dpt": 1753224,
+      "turnoutPct": 79.95,
+      "turnoutVoters": 1401698
+    },
+    "63": {
+      "dpt": 2869166,
+      "turnoutPct": 83.02,
+      "turnoutVoters": 2382103
+    },
+    "64": {
+      "dpt": 2481386,
+      "turnoutPct": 80.73,
+      "turnoutVoters": 2003281
+    },
+    "65": {
+      "dpt": 450108,
+      "turnoutPct": 79.81,
+      "turnoutVoters": 359241
+    },
+    "71": {
+      "dpt": 1908115,
+      "turnoutPct": 83.55,
+      "turnoutVoters": 1594305
+    },
+    "72": {
+      "dpt": 1952810,
+      "turnoutPct": 83.98,
+      "turnoutVoters": 1640063
+    },
+    "73": {
+      "dpt": 6159375,
+      "turnoutPct": 81.59,
+      "turnoutVoters": 5025189
+    },
+    "74": {
+      "dpt": 1723539,
+      "turnoutPct": 82.7,
+      "turnoutVoters": 1425406
+    },
+    "75": {
+      "dpt": 812801,
+      "turnoutPct": 88.96,
+      "turnoutVoters": 723080
+    },
+    "76": {
+      "dpt": 865244,
+      "turnoutPct": 86.81,
+      "turnoutVoters": 751079
+    },
+    "81": {
+      "dpt": 1266025,
+      "turnoutPct": 79.3,
+      "turnoutVoters": 1003911
+    },
+    "82": {
+      "dpt": 803983,
+      "turnoutPct": 82.79,
+      "turnoutVoters": 665614
+    },
+    "91": {
+      "dpt": 3542544,
+      "turnoutPct": 95.75,
+      "turnoutVoters": 3391887
+    },
+    "92": {
+      "dpt": 742291,
+      "turnoutPct": 87.59,
+      "turnoutVoters": 650191
+    }
+  },
+  "2024": {
+    "11": {
+      "dpt": 3742037,
+      "turnoutPct": 87.01,
+      "turnoutVoters": 3285272
+    },
+    "12": {
+      "dpt": 10853940,
+      "turnoutPct": 74.01,
+      "turnoutVoters": 8149788
+    },
+    "13": {
+      "dpt": 4088606,
+      "turnoutPct": 75.73,
+      "turnoutVoters": 3128346
+    },
+    "14": {
+      "dpt": 4732174,
+      "turnoutPct": 77.62,
+      "turnoutVoters": 3748930
+    },
+    "15": {
+      "dpt": 2676107,
+      "turnoutPct": 83.0,
+      "turnoutVoters": 2260233
+    },
+    "16": {
+      "dpt": 6326348,
+      "turnoutPct": 84.83,
+      "turnoutVoters": 5436127
+    },
+    "17": {
+      "dpt": 1494828,
+      "turnoutPct": 85.94,
+      "turnoutVoters": 1296313
+    },
+    "18": {
+      "dpt": 6539128,
+      "turnoutPct": 78.79,
+      "turnoutVoters": 5206308
+    },
+    "19": {
+      "dpt": 1067434,
+      "turnoutPct": 84.84,
+      "turnoutVoters": 916278
+    },
+    "21": {
+      "dpt": 1500974,
+      "turnoutPct": 76.27,
+      "turnoutVoters": 1171833
+    },
+    "31": {
+      "dpt": 8252897,
+      "turnoutPct": 78.78,
+      "turnoutVoters": 6558734
+    },
+    "32": {
+      "dpt": 35714901,
+      "turnoutPct": 81.73,
+      "turnoutVoters": 29438041
+    },
+    "33": {
+      "dpt": 28289413,
+      "turnoutPct": 82.56,
+      "turnoutVoters": 23475811
+    },
+    "34": {
+      "dpt": 2870974,
+      "turnoutPct": 88.88,
+      "turnoutVoters": 2567394
+    },
+    "35": {
+      "dpt": 31402838,
+      "turnoutPct": 84.06,
+      "turnoutVoters": 26539721
+    },
+    "36": {
+      "dpt": 8842646,
+      "turnoutPct": 83.1,
+      "turnoutVoters": 7422507
+    },
+    "51": {
+      "dpt": 3269516,
+      "turnoutPct": 83.35,
+      "turnoutVoters": 2740692
+    },
+    "52": {
+      "dpt": 3918291,
+      "turnoutPct": 83.58,
+      "turnoutVoters": 3324612
+    },
+    "53": {
+      "dpt": 4008475,
+      "turnoutPct": 72.72,
+      "turnoutVoters": 2954796
+    },
+    "61": {
+      "dpt": 3958561,
+      "turnoutPct": 82.02,
+      "turnoutVoters": 3277815
+    },
+    "62": {
+      "dpt": 1935116,
+      "turnoutPct": 78.61,
+      "turnoutVoters": 1553192
+    },
+    "63": {
+      "dpt": 3025220,
+      "turnoutPct": 83.02,
+      "turnoutVoters": 2536483
+    },
+    "64": {
+      "dpt": 2778644,
+      "turnoutPct": 79.82,
+      "turnoutVoters": 2278041
+    },
+    "65": {
+      "dpt": 504252,
+      "turnoutPct": 79.53,
+      "turnoutVoters": 413132
+    },
+    "71": {
+      "dpt": 1969603,
+      "turnoutPct": 82.73,
+      "turnoutVoters": 1647005
+    },
+    "72": {
+      "dpt": 2236703,
+      "turnoutPct": 80.11,
+      "turnoutVoters": 1822442
+    },
+    "73": {
+      "dpt": 6670582,
+      "turnoutPct": 79.45,
+      "turnoutVoters": 5374353
+    },
+    "74": {
+      "dpt": 1867931,
+      "turnoutPct": 83.82,
+      "turnoutVoters": 1590919
+    },
+    "75": {
+      "dpt": 881206,
+      "turnoutPct": 88.35,
+      "turnoutVoters": 784051
+    },
+    "76": {
+      "dpt": 985760,
+      "turnoutPct": 80.71,
+      "turnoutVoters": 811657,
+      "note": "Nilai resmi Kpt KPU 1043/2024 Lampiran I.A dipertahankan, tetapi tidak konsisten: pengguna hak pilih DPT L dan P tercatat sama (390.054) sehingga turnoutVoters < suara sah Pilpres (819.424, Kpt KPU 360/2024)."
+    },
+    "81": {
+      "dpt": 1341012,
+      "turnoutPct": 79.79,
+      "turnoutVoters": 1095790
+    },
+    "82": {
+      "dpt": 953978,
+      "turnoutPct": 77.55,
+      "turnoutVoters": 758812
+    },
+    "91": {
+      "dpt": 727835,
+      "turnoutPct": 91.25,
+      "turnoutVoters": 684505
+    },
+    "92": {
+      "dpt": 385465,
+      "turnoutPct": 84.49,
+      "turnoutVoters": 336703
+    },
+    "93": {
+      "dpt": 367269,
+      "turnoutPct": 84.6,
+      "turnoutVoters": 320386
+    },
+    "94": {
+      "dpt": 1128844,
+      "turnoutPct": 99.96,
+      "turnoutVoters": 1133550
+    },
+    "95": {
+      "dpt": 1306414,
+      "turnoutPct": 99.99,
+      "turnoutVoters": 1306740
+    },
+    "96": {
+      "dpt": 440826,
+      "turnoutPct": 81.42,
+      "turnoutVoters": 366309
+    }
+  }
+}

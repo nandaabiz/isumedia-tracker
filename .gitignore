@@ -1,0 +1,25 @@
+# Dependencies & build
+node_modules/
+.nuxt/
+.output/
+.data/
+dist/
+
+# Environment (contoh ada di .env.example)
+.env
+.env.*
+!.env.example
+
+# PocketBase: binary diunduh scripts/setup-pocketbase.sh, data tidak dikomit
+scripts/bin/
+scripts/pb_data/
+scripts/pb_migrations
+bin/
+pb_data/
+
+# Tooling lokal
+.claude/
+**/.claude/
+.DS_Store
+*.log
+npm-debug.log*

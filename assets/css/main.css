@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Shadcn Preset b2D2hq2C0 (Style: Luma, Base: Mist, Theme: Blue, Chart: Emerald) */
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.148 0.004 228.8);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.148 0.004 228.8);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.148 0.004 228.8);
+    --primary: oklch(0.488 0.243 264.376);
+    --primary-foreground: oklch(0.97 0.014 254.604);
+    --secondary: oklch(0.967 0.001 286.375);
+    --secondary-foreground: oklch(0.21 0.006 285.885);
+    --muted: oklch(0.963 0.002 197.1);
+    --muted-foreground: oklch(0.56 0.021 213.5);
+    --accent: oklch(0.963 0.002 197.1);
+    --accent-foreground: oklch(0.218 0.008 223.9);
+    --destructive: oklch(0.577 0.245 27.325);
+    --destructive-foreground: oklch(0.985 0 0);
+    --border: oklch(0.925 0.005 214.3);
+    --input: oklch(0.925 0.005 214.3);
+    --ring: oklch(0.723 0.014 214.4);
+    --radius: 0.625rem;
+
+    /* Charts (Emerald) */
+    --chart-1: oklch(0.845 0.143 164.978);
+    --chart-2: oklch(0.696 0.17 162.48);
+    --chart-3: oklch(0.596 0.145 163.225);
+    --chart-4: oklch(0.508 0.118 165.612);
+    --chart-5: oklch(0.432 0.095 166.913);
+
+    /* Sidebar Tokens */
+    --sidebar: oklch(0.987 0.002 197.1);
+    --sidebar-foreground: oklch(0.148 0.004 228.8);
+    --sidebar-primary: oklch(0.546 0.245 262.881);
+    --sidebar-primary-foreground: oklch(0.97 0.014 254.604);
+    --sidebar-accent: oklch(0.963 0.002 197.1);
+    --sidebar-accent-foreground: oklch(0.218 0.008 223.9);
+    --sidebar-border: oklch(0.925 0.005 214.3);
+    --sidebar-ring: oklch(0.723 0.014 214.4);
+
+    /* Ecclesia & Humanitas Foundations */
+    --bg-canvas: #FAF8F5;
+    --bg-surface: #FFFFFF;
+    --border-subtle: #E6E0D4;
+    --text-primary: #1F2128;
+    --text-secondary: #5E626E;
+  }
+
+  .dark {
+    /* Shadcn Preset b2D2hq2C0 Dark Mode */
+    --background: oklch(0.148 0.004 228.8);
+    --foreground: oklch(0.987 0.002 197.1);
+    --card: oklch(0.218 0.008 223.9);
+    --card-foreground: oklch(0.987 0.002 197.1);
+    --popover: oklch(0.218 0.008 223.9);
+    --popover-foreground: oklch(0.987 0.002 197.1);
+    --primary: oklch(0.424 0.199 265.638);
+    --primary-foreground: oklch(0.97 0.014 254.604);
+    --secondary: oklch(0.274 0.006 286.033);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.275 0.011 216.9);
+    --muted-foreground: oklch(0.723 0.014 214.4);
+    --accent: oklch(0.275 0.011 216.9);
+    --accent-foreground: oklch(0.987 0.002 197.1);
+    --destructive: oklch(0.704 0.191 22.216);
+    --destructive-foreground: oklch(0.985 0 0);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.56 0.021 213.5);
+
+    /* Charts (Emerald) */
+    --chart-1: oklch(0.845 0.143 164.978);
+    --chart-2: oklch(0.696 0.17 162.48);
+    --chart-3: oklch(0.596 0.145 163.225);
+    --chart-4: oklch(0.508 0.118 165.612);
+    --chart-5: oklch(0.432 0.095 166.913);
+
+    /* Sidebar Dark */
+    --sidebar: oklch(0.218 0.008 223.9);
+    --sidebar-foreground: oklch(0.987 0.002 197.1);
+    --sidebar-primary: oklch(0.623 0.214 259.815);
+    --sidebar-primary-foreground: oklch(0.97 0.014 254.604);
+    --sidebar-accent: oklch(0.275 0.011 216.9);
+    --sidebar-accent-foreground: oklch(0.987 0.002 197.1);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.56 0.021 213.5);
+
+    --bg-canvas: #14161C;
+    --bg-surface: #1F222A;
+    --border-subtle: #2E3340;
+    --text-primary: #F4F2EC;
+    --text-secondary: #A6ABB8;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Custom Selection */
+  ::selection {
+    background-color: #F7E6E8;
+    color: #7E2032;
+  }
+
+  .dark ::selection {
+    background-color: #48111B;
+    color: #FAF7EF;
+  }
+
+  /* Angka data sejajar kolom */
+  .font-mono, td, .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Fokus keyboard yang konsisten untuk tautan & kontrol tanpa gaya fokus sendiri */
+  a:focus-visible, summary:focus-visible, [role="button"]:focus-visible {
+    outline: 2px solid #7E2032;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .dark a:focus-visible, .dark summary:focus-visible, .dark [role="button"]:focus-visible {
+    outline-color: #D4AF37;
+  }
+
+  a {
+    text-underline-offset: 3px;
+  }
+
+  /* Caret */
+  input, textarea {
+    caret-color: #7E2032;
+  }
+
+  .dark input, .dark textarea {
+    caret-color: #D4AF37;
+  }
+
+  /* Impeccable Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #D5CCBD;
+    border-radius: 9999px;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: #343844;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B8AB96;
+  }
+}
+
+/* Leaflet Map Styling Override */
+.leaflet-container {
+  background-color: #F5EEDB !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.dark .leaflet-container {
+  background-color: #14161C !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #FFFFFF !important;
+  color: #1F2128 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px -5px rgba(40, 30, 20, 0.12) !important;
+  border: 1px solid #E6E0D4 !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.dark .leaflet-popup-content-wrapper {
+  background: #1F222A !important;
+  color: #F4F2EC !important;
+  border: 1px solid #343844 !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  background: #FFFFFF !important;
+}
+
+.dark .leaflet-popup-tip {
+  background: #1F222A !important;
+}
