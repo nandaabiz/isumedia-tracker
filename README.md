@@ -119,6 +119,8 @@ Tombol **Unduh PDF** di kedua modul membuat laporan teks A4 (bisa dicari, kecil 
 DEPLOY_HOST=user@server DEPLOY_PATH=/srv/isumedia-tracker ./deploy.sh --remote
 ```
 
+Panduan lengkap VPS Ubuntu + aaPanel (Nginx, SSL, firewall, PocketBase, backup): **[docs/DEPLOY_AAPANEL.md](docs/DEPLOY_AAPANEL.md)**.
+
 ---
 
 ## 📚 Dokumentasi Teknis Lengkap
