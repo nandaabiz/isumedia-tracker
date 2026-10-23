@@ -2,8 +2,12 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { jsPDF } from 'jspdf'
 import * as autoTableModule from 'jspdf-autotable'
-import { buildMediaReport, toWinAnsi, slugify } from '../lib/report-pdf.ts'
+import { readFileSync } from 'node:fs'
+import { buildElectoralReport, buildMediaReport, demographyRows, toWinAnsi, slugify } from '../lib/report-pdf.ts'
 import { analyzeIssue } from '../lib/issue-analysis.ts'
+import { buildProvinces } from '../lib/electoral-data.ts'
+import { detectSplitTicket } from '../lib/electoral-metrics.ts'
+import { demographicVoteCorrelations } from '../lib/demography.ts'
 
 // Interop CJS di Node membungkus default export sekali lagi
 const autoTable: any = typeof (autoTableModule as any).default === 'function' ? (autoTableModule as any).default : (autoTableModule as any).default.default
@@ -41,4 +45,40 @@ test('toCsv: escape kutip/koma dan cegah formula injection', async () => {
   const { toCsv } = await import('../lib/csv.ts')
   const csv = toCsv(['a', 'b'], [['=HYPERLINK("x")', 'koma, "kutip"'], [12, null]])
   assert.equal(csv, 'a,b\r\n"\'=HYPERLINK(""x"")","koma, ""kutip"""\r\n12,')
+})
+
+test('laporan pemilu memuat profil BPS dan gubernur terpilih', () => {
+  const read = (f: string) => JSON.parse(readFileSync(new URL(`../data/electoral/${f}`, import.meta.url), 'utf8'))
+  const provinces = buildProvinces({
+    provinces: read('provinces.json'),
+    presidential: read('presidential.json'),
+    voters: read('voters.json'),
+    legislative: read('legislative.json'),
+    demography: read('demography.json'),
+    pilkada: read('pilkada.json')
+  })
+  const jabar = provinces.find(p => p.code === '32')!
+  const splitRows = provinces
+    .map(p => ({ provinceId: p.id, provinceName: p.name, result: detectSplitTicket(p, 2024)! }))
+    .filter(r => r.result)
+
+  const rows = demographyRows(jabar.demography[2024])
+  assert.match(rows.find(r => r[0] === 'IPM')![1], /2024; nasional 74,20/)
+  assert.match(rows.find(r => r[0] === 'Lapangan kerja utama')![1], /Sakernas Agustus 2024/)
+  assert.deepEqual(demographyRows(undefined), [['Profil BPS', 'Tidak tersedia untuk periode ini']])
+
+  const doc = buildElectoralReport(jsPDF as any, autoTable, {
+    generatedBy: 'QA',
+    generatedAt: new Date('2026-10-20T12:00:00Z'),
+    year: 2024,
+    province: jabar,
+    provinces,
+    splitRows,
+    correlations: demographicVoteCorrelations(provinces, 2024),
+    nationalSummary: { totalDPT: 1, avgTurnout: 80, totalProvinces: 38 }
+  })
+  const text = new TextDecoder('latin1').decode(new Uint8Array(doc.output('arraybuffer')))
+  assert.ok(text.startsWith('%PDF-'))
+  assert.ok(text.includes('Karakteristik Masyarakat Jawa Barat'))
+  assert.ok(text.includes(jabar.gubernatorial[2024]!.winner.split(' ')[0]))
 })

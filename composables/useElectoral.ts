@@ -7,21 +7,24 @@ import type {
 } from '~/types/electoral'
 import { computeVoterMetrics, detectSplitTicket } from '~/lib/electoral-metrics'
 import { buildProvinces, PARTY_COLORS } from '~/lib/electoral-data'
+import { demographicVoteCorrelations } from '~/lib/demography'
 import provincesJson from '~/data/electoral/provinces.json'
 import presidentialJson from '~/data/electoral/presidential.json'
 import votersJson from '~/data/electoral/voters.json'
 import legislativeJson from '~/data/electoral/legislative.json'
-import analystNotesJson from '~/data/electoral/analyst-notes.json'
+import demographyJson from '~/data/electoral/demography.json'
+import pilkadaJson from '~/data/electoral/pilkada.json'
 
 export { PARTY_COLORS }
 
-// Data resmi KPU 38 provinsi (lihat data/electoral/SOURCES-*.md); metrik pemilih dihitung, bukan nilai statis
+// Data resmi KPU, BPS, & hasil Pilgub 38 provinsi (lihat data/electoral/SOURCES-*.md); metrik pemilih dihitung, bukan nilai statis
 const PROVINCES_DATA: ProvinceElectoralData[] = buildProvinces({
   provinces: provincesJson as any,
   presidential: presidentialJson as any,
   voters: votersJson as any,
   legislative: legislativeJson as any,
-  analystNotes: analystNotesJson as any
+  demography: demographyJson as any,
+  pilkada: pilkadaJson as any
 }).map(p => {
   const metrics = computeVoterMetrics(p)
   return {
@@ -109,6 +112,9 @@ export function useElectoral() {
       .filter((r): r is { provinceId: string; provinceName: string; result: NonNullable<typeof r.result> } => r.result !== null)
   })
 
+  // FR-2.3.3: korelasi lintas provinsi indikator BPS vs porsi suara capres
+  const demographicCorrelations = computed(() => demographicVoteCorrelations(provincesInYear.value, selectedYear.value))
+
   const filteredNews = computed(() => {
     return newsRecords.value.filter(n => n.year === selectedYear.value)
   })
@@ -161,6 +167,7 @@ export function useElectoral() {
     classificationCounts,
     selectedSplitTicket,
     splitTicketMatrix,
+    demographicCorrelations,
     PARTY_COLORS
   }
 }

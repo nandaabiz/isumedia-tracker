@@ -80,7 +80,8 @@ const {
   filteredNews,
   nationalSummary,
   classificationCounts,
-  splitTicketMatrix
+  splitTicketMatrix,
+  demographicCorrelations
 } = useElectoral()
 
 const { isExporting, exportMessage, canShareFiles, exportMediaReport, exportElectoralReport } = useReportExport()
@@ -125,6 +126,7 @@ function exportElectoral(mode: DeliveryMode) {
     province: selectedProvince.value,
     provinces: provinces.value,
     splitRows: splitTicketMatrix.value,
+    correlations: demographicCorrelations.value,
     nationalSummary: nationalSummary.value
   }, mode)
 }
@@ -405,6 +407,7 @@ watch(activeTopicId, syncActiveTopic)
         <ProvinceDetailCard
           :province="selectedProvince"
           :year="selectedYear"
+          :correlations="demographicCorrelations"
         />
 
         <SplitTicketMatrix

@@ -37,8 +37,8 @@ Dibangun dengan **Nuxt.js 3**, **shadcn-vue** (Preset `--preset b2D2hq2C0`: Styl
 - **Sudut Pandang Analisis**: Beralih instan antara **Hasil Pilpres**, **Perolehan Suara Parpol (Pileg DPR RI)**, dan **Klasifikasi Loyalis vs Swing**.
 - **Indeks Volatilitas Pemilih (*Pedersen Swing Index*)**: Memetakan daerah basis kuat (*strongholds*) versus daerah pertempuran sengit (*battleground states*).
 - **Data resmi KPU 38 provinsi**: Pilpres, Pileg DPR RI (suara & kursi semua partai), DPT, dan partisipasi 2014/2019/2024 di `data/electoral/` beserta sumber dan hasil verifikasinya (`SOURCES-*.md`).
-- **Matriks split-ticket** Pilpres vs Pileg per provinsi.
-- **Profil Sosio-Demografi**: catatan analis untuk 7 provinsi (belum diverifikasi BPS); provinsi lain menunggu impor data BPS.
+- **Matriks Eksekutif vs Legislatif** per provinsi: split-ticket Pilpres vs Pileg DPR RI, ditambah gubernur terpilih Pilgub terdekat beserta partai pengusung dan apakah pemenang Pileg ikut mengusungnya (`pilkada.json`, `SOURCES-pilkada.md`).
+- **Karakteristik masyarakat (data BPS, 38 provinsi)**: % penduduk perkotaan (proyeksi) & tipologi urban/transisi/rural, struktur generasi (SP2020/SUPAS 2025), sektor lapangan kerja dominan (Sakernas Agustus), IPM, rata-rata/harapan lama sekolah, dan indeks pendidikan, masing-masing dengan tahun acuan terdekat tiap pemilu dan pembanding nasional (`demography.json`, `SOURCES-demography.md`). Korelasi lintas provinsi indikator BPS vs suara capres ditampilkan sebagai pola wilayah.
 - **Linimasa Berita Pemilu**: Mengorelasikan peristiwa berita nasional (Bansos, Putusan MK, Tol Trans Jawa, Ijtima Ulama, Efek Putra Daerah) dengan pergeseran elektoral.
 
 ---
@@ -88,12 +88,14 @@ npm run pb:migrate
 Seluruh metrik dihitung dari data, bukan nilai statis:
 
 - **`lib/issue-analysis.ts`** (Modul 1): parser kueri boolean, sentimen leksikon + negasi, NER 38 provinsi (kode Kemendagri + ibu kota/kota besar), kemiripan Jaccard + Levenshtein, rekonstruksi origin (Timestamp Zero), graf amplifikasi (induk = publikasi lebih awal dengan kemiripan tertinggi), Duplication Index, frasa kunci, entitas, ringkasan ekstraktif pro/kontra, dan velocity tren 24 jam.
-- **`lib/electoral-metrics.ts`** (Modul 2): Pedersen Index ½ Σ |ΔP| per periode, klasifikasi Kandang Loyalis / Condong Loyalis / Medan Pertempuran / Anomali, indeks loyalitas, dan deteksi split-ticket Pilpres vs Pileg.
+- **`lib/electoral-metrics.ts`** (Modul 2): Pedersen Index ½ Σ |ΔP| per periode, klasifikasi Kandang Loyalis / Condong Loyalis / Medan Pertempuran / Anomali, indeks loyalitas, deteksi split-ticket Pilpres vs Pileg, dan keselarasan gubernur terpilih dengan pemenang Pileg.
+- **`lib/demography.ts`** (Modul 2): pemilihan tahun acuan BPS terdekat (maks. 4 tahun, menghormati batas wilayah sebelum/sesudah pemekaran Papua 2022), indeks pendidikan `(RLS/15 + HLS/18)/2`, tipologi urban, dan korelasi Pearson indikator BPS vs porsi suara capres antarprovinsi.
 
 Batasan saat ini:
 - Sumber riil baru Google News RSS & Antara RSS. X, YouTube, TikTok, dan forum belum memiliki konektor; RSS tidak menyediakan reach/engagement (ditampilkan `N/A`).
 - Origin = publikasi paling awal dalam jendela perayapan 7 hari, bukan seluruh riwayat internet.
-- Data pemilu: 2014 mencakup 33 provinsi (Kaltara masih tergabung Kaltim), 2019 34 provinsi, 2024 38 provinsi; 4 provinsi Papua hasil pemekaran 2022 diklasifikasikan "data belum cukup". Rekap suara Pileg 2019 Kalimantan Selatan tidak tersedia di sumber terbuka (hanya kursi). Data Pilkada & demografi BPS belum diimpor. Detail di `data/electoral/SOURCES-*.md`.
+- Data pemilu: 2014 mencakup 33 provinsi (Kaltara masih tergabung Kaltim), 2019 34 provinsi, 2024 38 provinsi; 4 provinsi Papua hasil pemekaran 2022 diklasifikasikan "data belum cukup". Rekap suara Pileg 2019 Kalimantan Selatan tidak tersedia di sumber terbuka (hanya kursi). Detail di `data/electoral/SOURCES-*.md`.
+- Data BPS: % perkotaan adalah proyeksi (berbasis SP2010) dan tidak tersedia untuk Kaltara serta 6 provinsi Papua pada 2024; sektor kerja per provinsi baru ada sejak 2021 (2019 memakai Agustus 2021, 2014 kosong); generasi untuk 2014 kosong (sumber terdekat SP2020). Pembanding legislatif untuk gubernur masih DPR RI karena kursi DPRD belum diimpor; DIY tidak menggelar Pilgub. Data Pilgub bersumber Wikipedia id + putusan MK (situs KPU daerah tidak dapat diakses); 6 entri periode 2014 tanpa koalisi pengusung terverifikasi sehingga keselarasannya tidak dihitung.
 - Login lockout tersimpan di memori proses: cukup untuk satu instance; pakai penyimpanan bersama bila diskalakan.
 - Topik bawaan memakai data contoh sampai perayapan pertama berhasil (badge **Data Contoh** vs **Data Live**).
 

@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { GitCompare } from 'lucide-vue-next'
 import type { ElectionYear, SplitTicketResult } from '~/types/electoral'
-import { PARTY_COLORS } from '~/lib/electoral-data'
+import { NO_GUBERNATORIAL_ELECTION, PARTY_COLORS } from '~/lib/electoral-data'
 import Badge from '~/components/ui/Badge.vue'
 
 interface Props {
@@ -17,6 +17,8 @@ const emit = defineEmits<{
 }>()
 
 const splitCount = computed(() => props.rows.filter(r => r.result.isSplitTicket).length)
+const comparableRows = computed(() => props.rows.filter(r => r.result.governor?.alignedWithLegislative !== undefined))
+const divergentCount = computed(() => comparableRows.value.filter(r => r.result.governor!.alignedWithLegislative === false).length)
 </script>
 
 <template>
@@ -25,13 +27,16 @@ const splitCount = computed(() => props.rows.filter(r => r.result.isSplitTicket)
       <div>
         <h3 class="font-serif font-bold text-base sm:text-lg text-parchment-900 dark:text-parchment-100 flex items-center gap-2">
           <GitCompare class="w-5 h-5 text-claret-700 dark:text-brass-400" />
-          <span>Matriks Pemenang Pilpres vs Pileg {{ year }}</span>
+          <span>Matriks Eksekutif vs Legislatif {{ year }}</span>
         </h3>
         <p class="text-xs text-parchment-500 dark:text-parchment-400">
-          Deteksi split-ticket voting: pemenang Pileg DPR RI bukan pengusung capres pemenang di provinsi yang sama
+          Split-ticket: pemenang Pileg DPR RI bukan pengusung capres pemenang. Gubernur: hasil Pilgub terdekat dengan Pemilu {{ year }}.
         </p>
       </div>
-      <Badge variant="brass">{{ splitCount }} dari {{ rows.length }} provinsi split-ticket</Badge>
+      <div class="flex flex-wrap gap-1.5">
+        <Badge variant="brass">{{ splitCount }} dari {{ rows.length }} provinsi split-ticket</Badge>
+        <Badge v-if="comparableRows.length" variant="outline">{{ divergentCount }} dari {{ comparableRows.length }} gubernur beda dengan pemenang Pileg</Badge>
+      </div>
     </div>
 
     <div v-if="!rows.length" class="mt-4 p-6 text-center text-xs text-parchment-500 rounded-lg border border-dashed border-parchment-300 dark:border-monastic-700">
@@ -45,7 +50,9 @@ const splitCount = computed(() => props.rows.filter(r => r.result.isSplitTicket)
             <th scope="col" class="py-2 pr-3 font-semibold">Provinsi</th>
             <th scope="col" class="py-2 pr-3 font-semibold">Capres Pemenang</th>
             <th scope="col" class="py-2 pr-3 font-semibold">Pemenang Pileg</th>
-            <th scope="col" class="py-2 font-semibold">Pola</th>
+            <th scope="col" class="py-2 pr-3 font-semibold">Pola</th>
+            <th scope="col" class="py-2 pr-3 font-semibold">Gubernur (Pilgub) & Pengusung</th>
+            <th scope="col" class="py-2 font-semibold">Gubernur vs Pileg</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-parchment-200 dark:divide-monastic-700">
@@ -66,10 +73,23 @@ const splitCount = computed(() => props.rows.filter(r => r.result.isSplitTicket)
                 {{ row.result.legislativeWinner }}
               </span>
             </td>
-            <td class="py-2">
+            <td class="py-2 pr-3">
               <Badge :variant="row.result.isSplitTicket ? 'brass' : 'positive'">
                 {{ row.result.isSplitTicket ? 'Split' : 'Searah' }}
               </Badge>
+            </td>
+            <td class="py-2 pr-3 text-parchment-700 dark:text-parchment-300 min-w-[12rem]">
+              <template v-if="row.result.governor">
+                <span class="block">{{ row.result.governor.winner }} <span class="text-parchment-500 tabular-nums">({{ row.result.governor.electionYear }})</span></span>
+                <span class="block text-[11px] text-parchment-500">{{ row.result.governor.independent ? 'Perseorangan' : row.result.governor.parties?.join(', ') ?? 'Pengusung tidak terverifikasi' }}</span>
+              </template>
+              <span v-else class="text-parchment-500">{{ NO_GUBERNATORIAL_ELECTION.includes(row.provinceId) ? 'Ditetapkan (tanpa Pilgub)' : 'Tidak tersedia' }}</span>
+            </td>
+            <td class="py-2">
+              <Badge v-if="row.result.governor?.alignedWithLegislative !== undefined" :variant="row.result.governor.alignedWithLegislative ? 'positive' : 'brass'">
+                {{ row.result.governor!.alignedWithLegislative ? 'Searah' : 'Beda' }}
+              </Badge>
+              <span v-else class="text-parchment-500">-</span>
             </td>
           </tr>
         </tbody>

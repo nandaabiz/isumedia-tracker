@@ -6,7 +6,8 @@
 import type { jsPDF as JsPDF } from 'jspdf'
 import type { UserOptions } from 'jspdf-autotable'
 import type { AmplificationNode, IssueAnalysis, MonitoredTopic, OriginPost, RegionalIssueStat } from '~/types/issue'
-import type { ElectionYear, ProvinceElectoralData, SplitTicketResult, VoterClassification } from '~/types/electoral'
+import type { DemographyIndicator, DemographySnapshot, ElectionYear, ProvinceElectoralData, SplitTicketResult, VoterClassification } from '~/types/electoral'
+import { FACTOR_LABEL, type FactorCorrelation } from './demography.ts'
 
 export type AutoTableFn = (doc: JsPDF, options: UserOptions) => void
 export type JsPDFCtor = new (options?: any) => JsPDF
@@ -57,6 +58,8 @@ export interface ElectoralReportInput extends ReportMeta {
   province: ProvinceElectoralData
   provinces: ProvinceElectoralData[]
   splitRows: { provinceId: string; provinceName: string; result: SplitTicketResult }[]
+  /** Korelasi lintas provinsi indikator BPS vs suara capres (lib/demography) */
+  correlations?: FactorCorrelation[]
   nationalSummary: { totalDPT: number; avgTurnout: number; totalProvinces: number }
 }
 
@@ -78,6 +81,28 @@ function formatDelay(sec: number): string {
 }
 
 const num = (n: number) => n.toLocaleString('id-ID')
+const dec = (n: number, digits = 1) => n.toLocaleString('id-ID', { minimumFractionDigits: digits, maximumFractionDigits: digits })
+
+function withNational(ind: DemographyIndicator, digits = 1, suffix = ''): string {
+  const national = ind.national !== undefined ? `; nasional ${dec(ind.national, digits)}${suffix}` : ''
+  return `${dec(ind.value, digits)}${suffix} (${ind.refYear}${national})`
+}
+
+/** Baris profil BPS untuk laporan; indikator kosong ditulis eksplisit agar tidak terbaca sebagai nol */
+export function demographyRows(d: DemographySnapshot | undefined): [string, string][] {
+  if (!d) return [['Profil BPS', 'Tidak tersedia untuk periode ini']]
+  const NA = 'Tidak tersedia'
+  const top = d.employment?.sectors.slice(0, 3).map(s => `${s.sector} ${dec(s.percentage)}%`).join('; ')
+  const g = d.generations
+  return [
+    ['Penduduk perkotaan (proyeksi)', d.urbanPercentage ? `${withNational(d.urbanPercentage, 1, '%')}${d.urbanTypology ? ` - ${{ urban: 'urban', transition: 'transisi', rural: 'rural' }[d.urbanTypology]}` : ''}` : NA],
+    ['Gen Z + Milenial', g ? `${dec(g.genZAndMillennial)}% penduduk (${g.refYear === 2020 ? 'SP2020' : `SUPAS ${g.refYear}`}${g.nationalGenZAndMillennial !== undefined ? `; nasional ${dec(g.nationalGenZAndMillennial)}%` : ''})` : NA],
+    ['Lapangan kerja utama', d.employment ? `${top} (Sakernas Agustus ${d.employment.refYear})` : NA],
+    ['IPM', d.hdi ? withNational(d.hdi, 2) : NA],
+    ['Indeks pendidikan', d.educationIndex ? withNational(d.educationIndex, 2) : NA],
+    ['Rata-rata / harapan lama sekolah', d.meanYearsSchooling && d.expectedYearsSchooling ? `${dec(d.meanYearsSchooling.value, 2)} / ${dec(d.expectedYearsSchooling.value, 2)} tahun (${d.meanYearsSchooling.refYear})` : NA]
+  ]
+}
 
 const CP1252_EXTRA = '€‚ƒ„…†‡ˆ‰Š‹ŒŽ‘’“”•–—˜™š›œžŸ'
 const REPLACEMENTS: Record<string, string> = { '≥': '>=', '≤': '<=', '→': '->', '−': '-', 'Σ': 'jumlah ', '\u00A0': ' ' }
@@ -303,7 +328,7 @@ export function buildElectoralReport(JsPDF: JsPDFCtor, autoTable: AutoTableFn, i
 
   w.title('IsuMedia Tracker  |  Laporan Analitik Pemilu', `Pemilu ${year}: ${province.name} & Ringkasan Nasional`, [
     `Dibuat ${formatDateTimeWib(now)} oleh ${input.generatedBy}`,
-    'Sumber: rekapitulasi resmi KPU (lihat data/electoral/SOURCES-*.md); indikator dihitung otomatis dari data tersebut.'
+    'Sumber: rekapitulasi resmi KPU, tabel BPS, dan hasil Pilgub (lihat data/electoral/SOURCES-*.md); indikator dihitung otomatis dari data tersebut.'
   ])
 
   w.heading('Ringkasan Nasional')
@@ -316,7 +341,11 @@ export function buildElectoralReport(JsPDF: JsPDFCtor, autoTable: AutoTableFn, i
     ['DPT tercatat', input.nationalSummary.totalDPT ? num(input.nationalSummary.totalDPT) : 'Tidak tersedia'],
     ['Rata-rata partisipasi', input.nationalSummary.avgTurnout ? `${input.nationalSummary.avgTurnout}%` : 'Tidak tersedia'],
     ['Klasifikasi pemilih', (Object.keys(counts) as VoterClassification[]).map(k => `${CLASSIFICATION_LABEL[k]} ${counts[k]}`).join(' • ')],
-    ['Split-ticket', `${input.splitRows.filter(r => r.result.isSplitTicket).length} dari ${input.splitRows.length} provinsi`]
+    ['Split-ticket', `${input.splitRows.filter(r => r.result.isSplitTicket).length} dari ${input.splitRows.length} provinsi`],
+    ['Gubernur beda dengan pemenang Pileg', (() => {
+      const withGov = input.splitRows.filter(r => r.result.governor?.alignedWithLegislative !== undefined)
+      return withGov.length ? `${withGov.filter(r => r.result.governor!.alignedWithLegislative === false).length} dari ${withGov.length} provinsi` : 'Data Pilgub tidak tersedia'
+    })()]
   ])
 
   w.heading(`Profil ${province.name}`)
@@ -326,10 +355,23 @@ export function buildElectoralReport(JsPDF: JsPDFCtor, autoTable: AutoTableFn, i
     ['Indeks Pedersen rata-rata', metrics?.pedersenByPeriod.length ? `${metrics.pedersenSwingIndex} (${metrics.pedersenByPeriod.map(p => `${p.from}-${p.to}: ${p.value}`).join('; ')})` : 'Belum dapat dihitung (rekap suara 2 pemilu berurutan tidak tersedia)'],
     ['Pemenang Pileg per periode', metrics ? Object.entries(metrics.winnersByYear).filter(([, v]) => v).map(([y, v]) => `${y}: ${v}`).join(' • ') : '-'],
     ['Indeks loyalitas', metrics ? `${metrics.loyaltyScore}${metrics.loyaltyParty ? ` terhadap ${metrics.loyaltyParty}` : ''}` : '-'],
-    ['DPT & partisipasi', `${province.dpt[year] ? num(province.dpt[year]) : 'N/A'} • ${province.turnoutPercentage[year] ? `${province.turnoutPercentage[year]}%` : 'N/A'}`]
+    ['DPT & partisipasi', `${province.dpt[year] ? num(province.dpt[year]) : 'N/A'} • ${province.turnoutPercentage[year] ? `${province.turnoutPercentage[year]}%` : 'N/A'}`],
+    ['Gubernur (Pilgub terdekat)', (() => {
+      const gov = province.gubernatorial[year]
+      if (!gov) return 'Tidak tersedia'
+      return `${gov.winner} - Pilgub ${gov.electionYear}${gov.votePercentage !== undefined ? `, ${dec(gov.votePercentage, 2)}%` : ''} (${gov.independent ? 'perseorangan' : gov.parties?.join(', ') ?? 'pengusung tidak terverifikasi'})`
+    })()]
   ])
 
   if (province.dataNotes.length) w.paragraph(`Catatan data: ${province.dataNotes.join(' ')}`, { size: 8, color: COLOR.muted })
+
+  w.heading(`Karakteristik Masyarakat ${province.name} (BPS)`)
+  w.keyValues(demographyRows(province.demography[year]))
+  const highlights = (input.correlations ?? []).filter(c => c.n >= 10 && Math.abs(c.r) >= 0.3).sort((a, b) => Math.abs(b.r) - Math.abs(a.r)).slice(0, 5)
+  if (highlights.length) {
+    w.paragraph(`Pola lintas provinsi ${year} (korelasi antarwilayah, bukan sebab-akibat):`, { size: 9 })
+    w.bullets(highlights.map(c => `${c.candidate}: r = ${dec(c.r, 2)} terhadap ${FACTOR_LABEL[c.factor]} (${c.n} provinsi)`))
+  }
 
   const pres = province.presidential[year]
   w.heading(`Pilpres ${year}`)
@@ -345,24 +387,27 @@ export function buildElectoralReport(JsPDF: JsPDFCtor, autoTable: AutoTableFn, i
   w.heading(`Matriks Seluruh Provinsi (${year})`)
   const splitById = new Map(input.splitRows.map(r => [r.provinceId, r.result]))
   w.table(
-    ['Provinsi', 'Capres pemenang', 'Pemenang Pileg', 'Pola', 'Klasifikasi', 'Pedersen'],
+    ['Provinsi', 'Capres pemenang', 'Pileg', 'Pola', 'Gubernur & pengusung', 'Gub. vs Pileg', 'Klasifikasi', 'Pedersen'],
     input.provinces.map(p => {
       const s = splitById.get(p.id)
+      const gov = p.gubernatorial[year]
       return [
         p.name,
         s?.presidentialWinner ?? '-',
         s?.legislativeWinner ?? p.legislative[year]?.winnerParty ?? '-',
         s ? (s.isSplitTicket ? 'Split' : 'Searah') : '-',
+        gov ? `${gov.winner} (${gov.electionYear})\n${gov.independent ? 'Perseorangan' : gov.parties?.join(', ') ?? 'pengusung tidak terverifikasi'}` : '-',
+        s?.governor?.alignedWithLegislative === undefined ? '-' : s.governor.alignedWithLegislative ? 'Searah' : 'Beda',
         CLASSIFICATION_LABEL[p.voterProfile.classification],
         p.voterProfile.metrics?.pedersenByPeriod.length ? p.voterProfile.metrics.pedersenSwingIndex : '-'
       ]
     }),
-    { 0: { cellWidth: 34 }, 3: { cellWidth: 14 }, 5: { cellWidth: 16 } }
+    { 0: { cellWidth: 24 }, 1: { cellWidth: 24 }, 2: { cellWidth: 16 }, 3: { cellWidth: 12 }, 4: { cellWidth: 44 }, 5: { cellWidth: 13 }, 7: { cellWidth: 14 } }
   )
 
   w.heading('Metodologi')
   w.paragraph(
-    'Indeks Pedersen = ½ Σ |P(i,t) − P(i,t−1)| atas porsi suara Pileg DPR RI per partai antar-pemilu. Kandang loyalis: partai yang sama menang 3 periode dengan variasi suara < 8 poin; anomali: rata-rata Pedersen ≥ 20. Split-ticket: partai pemenang Pileg bukan pengusung capres pemenang di provinsi yang sama. Empat provinsi Papua hasil pemekaran 2022 hanya memiliki data 2024.',
+    'Indeks Pedersen = ½ Σ |P(i,t) − P(i,t−1)| atas porsi suara Pileg DPR RI per partai antar-pemilu. Kandang loyalis: partai yang sama menang 3 periode dengan variasi suara < 8 poin; anomali: rata-rata Pedersen ≥ 20. Split-ticket: partai pemenang Pileg bukan pengusung capres pemenang di provinsi yang sama. Gubernur vs Pileg: apakah partai pemenang Pileg DPR RI ikut mengusung gubernur hasil Pilgub terdekat dengan tanggal pemilu (data DPRD belum tersedia). Profil BPS memakai tahun acuan terdekat (maks. 4 tahun) dan ditandai tahunnya; % perkotaan adalah proyeksi BPS. Indeks pendidikan = (RLS/15 + HLS/18)/2. Empat provinsi Papua hasil pemekaran 2022 hanya memiliki data 2024.',
     { size: 8.5, color: COLOR.muted }
   )
 

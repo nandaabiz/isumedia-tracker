@@ -114,6 +114,8 @@ function normalizePartyName(name: string): string {
 /**
  * FR-2.2.2: Split-ticket voting — partai pemenang Pileg DPR RI di wilayah tersebut
  * bukan anggota koalisi pengusung capres pemenang di wilayah yang sama.
+ * Eksekutif daerah vs legislatif: apakah partai pemenang Pileg ikut mengusung gubernur
+ * hasil Pilgub terdekat (DPRD belum tersedia, jadi pembanding legislatifnya DPR RI).
  */
 export function detectSplitTicket(province: ProvinceElectoralData, year: ElectionYear): SplitTicketResult | null {
   const pres = province.presidential[year]
@@ -121,11 +123,21 @@ export function detectSplitTicket(province: ProvinceElectoralData, year: Electio
   const presWinner = pres?.candidates.find(c => c.isWinner)
   if (!presWinner || !leg?.winnerParty) return null
   const coalition = presWinner.parties.map(normalizePartyName)
+  const gov = province.gubernatorial[year]
   return {
     year,
     presidentialWinner: presWinner.name,
     coalition: presWinner.parties,
     legislativeWinner: leg.winnerParty,
-    isSplitTicket: !coalition.includes(normalizePartyName(leg.winnerParty))
+    isSplitTicket: !coalition.includes(normalizePartyName(leg.winnerParty)),
+    governor: gov && {
+      winner: gov.winner,
+      parties: gov.parties,
+      electionYear: gov.electionYear,
+      independent: gov.independent,
+      alignedWithLegislative: gov.parties
+        ? gov.parties.map(normalizePartyName).includes(normalizePartyName(leg.winnerParty))
+        : undefined
+    }
   }
 }

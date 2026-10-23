@@ -34,6 +34,8 @@ function province(
     turnoutPercentage: { 2014: 0, 2019: 0, 2024: 0 },
     presidential: { 2014: pres, 2019: pres, 2024: pres },
     legislative,
+    demography: {},
+    gubernatorial: {},
     voterProfile: { classification: 'battleground', loyaltyScore: 0, pedersenSwingIndex: 0 }
   }
 }

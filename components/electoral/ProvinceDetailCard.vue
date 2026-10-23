@@ -1,17 +1,20 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
-import { Users, Vote, Activity, Compass, AlertCircle, Trophy, Info, ChevronDown, ChevronUp } from 'lucide-vue-next'
-import type { ProvinceElectoralData, ElectionYear, VoterClassification } from '~/types/electoral'
+import { Users, Vote, Activity, Compass, AlertCircle, Trophy, Info, ChevronDown, ChevronUp, Landmark } from 'lucide-vue-next'
+import type { ProvinceElectoralData, ElectionYear, VoterClassification, DemographyIndicator, UrbanTypology } from '~/types/electoral'
 import { PARTY_COLORS } from '~/lib/electoral-data'
 import { detectSplitTicket, STRONGHOLD_MAX_SHARE_RANGE, VOLATILE_MIN_PEDERSEN } from '~/lib/electoral-metrics'
+import { FACTOR_LABEL, type FactorCorrelation } from '~/lib/demography'
 import Badge from '~/components/ui/Badge.vue'
 
 interface Props {
   province: ProvinceElectoralData
   year: ElectionYear
+  /** Korelasi lintas provinsi untuk tahun terpilih (lib/demography) */
+  correlations?: FactorCorrelation[]
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), { correlations: () => [] })
 const PARTY_PREVIEW = 8
 const showAllParties = ref(false)
 
@@ -69,6 +72,35 @@ const CLASSIFICATION_META: Record<VoterClassification, { label: string; variant:
 
 const classificationMeta = computed(() => CLASSIFICATION_META[props.province.voterProfile.classification])
 const partyLabel = (code: string) => PARTY_COLORS[code as keyof typeof PARTY_COLORS]?.name ?? code
+
+// Eksekutif daerah (Pilgub terdekat) vs legislatif
+const governor = computed(() => props.province.gubernatorial[props.year])
+const governorAligned = computed(() => splitTicket.value?.governor?.alignedWithLegislative)
+
+// FR-2.3.3: profil BPS dengan tahun acuan terdekat
+const demography = computed(() => props.province.demography[props.year])
+const topSectors = computed(() => demography.value?.employment?.sectors.slice(0, 3) ?? [])
+const TYPOLOGY_LABEL: Record<UrbanTypology, string> = { urban: 'Urban', transition: 'Transisi', rural: 'Rural' }
+const fmt = (n: number, digits = 1) => n.toLocaleString('id-ID', { minimumFractionDigits: digits, maximumFractionDigits: digits })
+
+function versusNational(value: number, national: number | undefined, digits = 1): string {
+  if (national === undefined) return ''
+  const diff = value - national
+  if (Math.abs(diff) < 10 ** -digits) return `setara nasional (${fmt(national, digits)})`
+  return `${diff > 0 ? '+' : '−'}${fmt(Math.abs(diff), digits)} dari nasional (${fmt(national, digits)})`
+}
+const indicatorNote = (ind: DemographyIndicator, digits = 1) => versusNational(ind.value, ind.national, digits)
+
+/** Faktor dengan korelasi terkuat per capres; hanya |r| ≥ 0,3 dari ≥ 10 provinsi yang ditampilkan */
+const correlationHighlights = computed(() => {
+  const byCandidate = new Map<string, FactorCorrelation>()
+  for (const c of props.correlations) {
+    if (c.n < 10 || Math.abs(c.r) < 0.3) continue
+    const best = byCandidate.get(c.candidate)
+    if (!best || Math.abs(c.r) > Math.abs(best.r)) byCandidate.set(c.candidate, c)
+  }
+  return [...byCandidate.values()]
+})
 </script>
 
 <template>
@@ -245,46 +277,111 @@ const partyLabel = (code: string) => PARTY_COLORS[code as keyof typeof PARTY_COL
           </p>
         </template>
         <p v-else class="text-parchment-500">Data Pilpres/Pileg {{ year }} belum lengkap untuk wilayah ini.</p>
-        <p class="flex items-start gap-1.5 text-[11px] text-parchment-500">
-          <AlertCircle class="w-3 h-3 shrink-0 mt-0.5" aria-hidden="true" />
-          Perbandingan dengan kepala daerah & DPRD menunggu impor data Pilkada.
-        </p>
+
+        <div class="pt-2.5 border-t border-parchment-200 dark:border-monastic-700 space-y-1.5">
+          <p class="flex items-center gap-1.5 font-semibold text-parchment-900 dark:text-parchment-100">
+            <Landmark class="w-3.5 h-3.5 text-claret-700 dark:text-brass-400" aria-hidden="true" />
+            Eksekutif daerah
+          </p>
+          <template v-if="governor">
+            <p class="text-parchment-700 dark:text-parchment-300">
+              Gubernur terpilih Pilgub {{ governor.electionYear }}: <strong>{{ governor.winner }}</strong>
+              <span v-if="governor.votePercentage !== undefined" class="tabular-nums"> ({{ fmt(governor.votePercentage, 2) }}%)</span>
+              <span class="block text-[11px] text-parchment-500">
+                {{ governor.independent ? 'Calon perseorangan (tanpa partai pengusung)' : governor.parties ? `Pengusung: ${governor.parties.join(', ')}` : 'Partai pengusung tidak terverifikasi di sumber' }}
+              </span>
+            </p>
+            <Badge v-if="governorAligned !== undefined" :variant="governorAligned ? 'positive' : 'brass'">
+              {{ governorAligned ? 'Searah dengan pemenang Pileg' : 'Beda dengan pemenang Pileg' }}
+            </Badge>
+            <p v-if="governor.note" class="text-[11px] text-parchment-500">{{ governor.note }}</p>
+          </template>
+          <p v-else class="text-parchment-500">Data Pilgub untuk periode {{ year }} tidak tersedia di wilayah ini.</p>
+          <p class="flex items-start gap-1.5 text-[11px] text-parchment-500">
+            <AlertCircle class="w-3 h-3 shrink-0 mt-0.5" aria-hidden="true" />
+            Pilgub terdekat dengan tanggal pemilu; pembanding legislatif masih DPR RI karena data kursi DPRD belum diimpor.
+          </p>
+        </div>
       </section>
     </div>
 
-    <!-- Karakteristik masyarakat -->
+    <!-- Karakteristik masyarakat (FR-2.3.3) -->
     <section class="p-4 rounded-lg border border-parchment-200 dark:border-monastic-700 bg-parchment-100/50 dark:bg-monastic-900/40 space-y-3">
       <h4 class="text-sm font-bold text-parchment-900 dark:text-parchment-100 flex items-center gap-2">
         <Users class="w-4 h-4 text-claret-700 dark:text-brass-400" aria-hidden="true" />
-        Karakteristik pemilih & faktor penentu
+        Karakteristik masyarakat & faktor penentu
       </h4>
-      <template v-if="province.voterProfile.analystNote">
-        <p class="text-[11px] text-amber-800 dark:text-amber-300">
-          Catatan analis dari versi awal aplikasi; angka belum diverifikasi ke data BPS.
-        </p>
-        <dl class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+      <template v-if="demography">
+        <dl class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 text-xs">
           <div class="p-2.5 rounded bg-white dark:bg-monastic-800 border border-parchment-200 dark:border-monastic-700">
-            <dt class="text-[11px] text-parchment-500 mb-0.5">Demografi</dt>
-            <dd class="font-semibold text-parchment-900 dark:text-parchment-100">
-              Urban {{ province.voterProfile.analystNote.urbanPercentage }}% • Gen Z/Milenial {{ province.voterProfile.analystNote.genZAndMillennialPercentage }}%
+            <dt class="text-[11px] text-parchment-500 mb-0.5">Urban vs rural</dt>
+            <dd v-if="demography.urbanPercentage" class="space-y-0.5">
+              <span class="font-semibold text-parchment-900 dark:text-parchment-100 tabular-nums">{{ fmt(demography.urbanPercentage.value) }}% perkotaan</span>
+              <Badge v-if="demography.urbanTypology" variant="outline" class="ml-1">{{ TYPOLOGY_LABEL[demography.urbanTypology] }}</Badge>
+              <span class="block text-[11px] text-parchment-500">Proyeksi {{ demography.urbanPercentage.refYear }} • {{ indicatorNote(demography.urbanPercentage) }}</span>
             </dd>
+            <dd v-else class="text-parchment-500">Tidak tersedia untuk batas wilayah ini</dd>
           </div>
           <div class="p-2.5 rounded bg-white dark:bg-monastic-800 border border-parchment-200 dark:border-monastic-700">
-            <dt class="text-[11px] text-parchment-500 mb-0.5">Sektor pekerjaan dominan</dt>
-            <dd class="font-semibold text-parchment-900 dark:text-parchment-100">{{ province.voterProfile.analystNote.dominantEmployment }}</dd>
+            <dt class="text-[11px] text-parchment-500 mb-0.5">Struktur generasi</dt>
+            <dd v-if="demography.generations" class="space-y-0.5">
+              <span class="font-semibold text-parchment-900 dark:text-parchment-100 tabular-nums">Gen Z + Milenial {{ fmt(demography.generations.genZAndMillennial) }}%</span>
+              <span class="block text-[11px] text-parchment-500 tabular-nums">
+                Gen Z {{ fmt(demography.generations.shares.genZ) }}% • Milenial {{ fmt(demography.generations.shares.millennial) }}% • Gen X {{ fmt(demography.generations.shares.genX) }}% • Boomer+ {{ fmt(demography.generations.shares.boomer + demography.generations.shares.preBoomer) }}%
+              </span>
+              <span class="block text-[11px] text-parchment-500">
+                {{ demography.generations.refYear === 2020 ? 'SP2020' : `SUPAS ${demography.generations.refYear}` }}
+                • {{ versusNational(demography.generations.genZAndMillennial, demography.generations.nationalGenZAndMillennial) }}
+              </span>
+            </dd>
+            <dd v-else class="text-parchment-500">Tidak ada data dalam ±4 tahun dari pemilu</dd>
           </div>
           <div class="p-2.5 rounded bg-white dark:bg-monastic-800 border border-parchment-200 dark:border-monastic-700">
-            <dt class="text-[11px] text-parchment-500 mb-0.5">Isu penentu suara</dt>
-            <dd class="font-semibold text-claret-800 dark:text-brass-300">{{ province.voterProfile.analystNote.keyIssue }}</dd>
+            <dt class="text-[11px] text-parchment-500 mb-0.5">Lapangan kerja dominan</dt>
+            <dd v-if="demography.employment" class="space-y-0.5">
+              <span v-for="(s, i) in topSectors" :key="s.sector" class="block tabular-nums" :class="i === 0 ? 'font-semibold text-parchment-900 dark:text-parchment-100' : 'text-parchment-700 dark:text-parchment-300'">
+                {{ s.sector }} {{ fmt(s.percentage) }}%
+              </span>
+              <span class="block text-[11px] text-parchment-500">Sakernas Agustus {{ demography.employment.refYear }}</span>
+            </dd>
+            <dd v-else class="text-parchment-500">Tabel BPS per provinsi baru tersedia sejak 2021</dd>
+          </div>
+          <div class="p-2.5 rounded bg-white dark:bg-monastic-800 border border-parchment-200 dark:border-monastic-700">
+            <dt class="text-[11px] text-parchment-500 mb-0.5">Pembangunan manusia & pendidikan</dt>
+            <dd v-if="demography.hdi || demography.educationIndex" class="space-y-0.5">
+              <span v-if="demography.hdi" class="block font-semibold text-parchment-900 dark:text-parchment-100 tabular-nums">
+                IPM {{ fmt(demography.hdi.value, 2) }}
+                <span class="font-normal text-[11px] text-parchment-500">({{ demography.hdi.refYear }}, {{ indicatorNote(demography.hdi, 2) }})</span>
+              </span>
+              <span v-if="demography.educationIndex" class="block text-parchment-700 dark:text-parchment-300 tabular-nums">
+                Indeks pendidikan {{ fmt(demography.educationIndex.value, 2) }}
+                <span class="text-[11px] text-parchment-500">• nasional {{ demography.educationIndex.national !== undefined ? fmt(demography.educationIndex.national, 2) : '-' }}</span>
+              </span>
+              <span v-if="demography.meanYearsSchooling && demography.expectedYearsSchooling" class="block text-[11px] text-parchment-500 tabular-nums">
+                Rata-rata lama sekolah {{ fmt(demography.meanYearsSchooling.value, 2) }} th • harapan {{ fmt(demography.expectedYearsSchooling.value, 2) }} th
+              </span>
+            </dd>
+            <dd v-else class="text-parchment-500">Tidak tersedia</dd>
           </div>
         </dl>
-        <p class="text-sm text-parchment-700 dark:text-parchment-300 leading-relaxed max-w-prose">
-          {{ province.voterProfile.analystNote.historicalNarrative }}
+
+        <div v-if="correlationHighlights.length" class="space-y-1 text-xs">
+          <p class="font-semibold text-parchment-800 dark:text-parchment-200">Pola lintas provinsi {{ year }}</p>
+          <ul class="space-y-0.5 text-parchment-700 dark:text-parchment-300">
+            <li v-for="c in correlationHighlights" :key="c.candidate">
+              Suara <strong>{{ c.candidate }}</strong> {{ c.r > 0 ? 'lebih tinggi' : 'lebih rendah' }} di provinsi dengan {{ FACTOR_LABEL[c.factor] }} lebih tinggi
+              <span class="font-mono tabular-nums text-[11px] text-parchment-500">(r = {{ fmt(c.r, 2) }}, {{ c.n }} provinsi)</span>
+            </li>
+          </ul>
+          <p class="text-[11px] text-parchment-500">Korelasi antarwilayah, bukan sebab-akibat atau perilaku individu pemilih.</p>
+        </div>
+
+        <p class="text-[11px] text-parchment-500">
+          Sumber: BPS (proyeksi penduduk, SP2020/SUPAS 2025, Sakernas, IPM metode baru); tahun acuan terdekat dengan Pemilu {{ year }}. Rincian di data/electoral/SOURCES-demography.md.
         </p>
       </template>
       <p v-else class="text-xs text-parchment-500">
-        Profil sosio-demografis (urbanisasi, struktur usia, sektor kerja) untuk {{ province.name }} belum tersedia.
-        Pola elektoral di atas sudah dihitung dari data resmi KPU.
+        Profil BPS untuk {{ province.name }} pada periode {{ year }} belum tersedia (provinsi belum terbentuk atau tidak ada tabel dalam ±4 tahun).
       </p>
     </section>
   </article>

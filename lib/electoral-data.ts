@@ -3,13 +3,14 @@
  * Modul murni agar dapat diuji dengan `node --test`.
  */
 import type {
-  AnalystProfileNote,
   ElectionYear,
+  GubernatorialResult,
   LegislativeResult,
   PartyCode,
   PresidentialResult,
   ProvinceElectoralData
 } from '~/types/electoral'
+import { buildDemographySnapshot, type RawDemography } from './demography.ts'
 
 export const PARTY_COLORS: Record<PartyCode, { name: string; hex: string }> = {
   PDIP: { name: 'PDI Perjuangan', hex: '#B91C1C' },
@@ -110,12 +111,17 @@ function buildLegislative(raw?: RawLegislative): LegislativeResult | undefined {
   }
 }
 
+/** Provinsi tanpa Pilgub: gubernur ditetapkan (UU 13/2012 Keistimewaan DIY) */
+export const NO_GUBERNATORIAL_ELECTION = ['prov_34']
+
 export function buildProvinces(input: {
   provinces: RawProvince[]
   presidential: ByYear<RawPresidential>
   voters: ByYear<RawVoters>
   legislative: ByYear<RawLegislative>
-  analystNotes: Record<string, AnalystProfileNote>
+  demography?: RawDemography
+  /** `null` = tidak ada Pilgub untuk provinsi tersebut */
+  pilkada?: ByYear<GubernatorialResult | null>
 }): ProvinceElectoralData[] {
   return input.provinces.map(p => {
     const dataNotes: string[] = []
@@ -123,6 +129,8 @@ export function buildProvinces(input: {
     const turnoutPercentage: ProvinceElectoralData['turnoutPercentage'] = {}
     const presidential: ProvinceElectoralData['presidential'] = {}
     const legislative: ProvinceElectoralData['legislative'] = {}
+    const demography: ProvinceElectoralData['demography'] = {}
+    const gubernatorial: ProvinceElectoralData['gubernatorial'] = {}
 
     for (const year of YEARS) {
       const voters = input.voters[year]?.[p.code]
@@ -135,6 +143,10 @@ export function buildProvinces(input: {
       if (pres) presidential[year] = pres
       const leg = buildLegislative(input.legislative[year]?.[p.code])
       if (leg) legislative[year] = leg
+      const snapshot = input.demography && buildDemographySnapshot(input.demography, p.code, year)
+      if (snapshot) demography[year] = snapshot
+      const gov = input.pilkada?.[year]?.[p.code]
+      if (gov) gubernatorial[year] = gov
     }
 
     if (['93', '94', '95', '96'].includes(p.code)) {
@@ -145,6 +157,9 @@ export function buildProvinces(input: {
     }
     if (Object.values(legislative).some(l => l?.winnerBasis === 'seats')) {
       dataNotes.push(`Rekap suara Pileg ${YEARS.filter(y => legislative[y]?.winnerBasis === 'seats').join(', ')} tidak tersedia; pemenang ditentukan dari perolehan kursi.`)
+    }
+    if (NO_GUBERNATORIAL_ELECTION.includes(`prov_${p.code}`)) {
+      dataNotes.push('Tidak ada Pilgub: Gubernur DIY ditetapkan sesuai UU 13/2012 tentang Keistimewaan DIY.')
     }
     if (p.code === '65' && !presidential[2014]) {
       dataNotes.push('Pemilu 2014: data Kalimantan Utara masih tergabung dengan Kalimantan Timur.')
@@ -162,11 +177,12 @@ export function buildProvinces(input: {
       dataNotes,
       presidential,
       legislative,
+      demography,
+      gubernatorial,
       voterProfile: {
         classification: 'insufficient',
         loyaltyScore: 0,
-        pedersenSwingIndex: 0,
-        analystNote: input.analystNotes[p.code]
+        pedersenSwingIndex: 0
       }
     }
   })
