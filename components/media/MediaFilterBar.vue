@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Globe, Twitter, Youtube, Video, MessageSquare, ShieldAlert } from 'lucide-vue-next'
+import { AtSign, Globe, Twitter, Youtube, Video, MessageSquare, ShieldAlert } from 'lucide-vue-next'
 import type { PlatformType } from '~/types/issue'
 
 interface Props {
@@ -14,6 +14,7 @@ const emit = defineEmits<{
 // `connected`: kanal yang sudah punya konektor perayapan riil; lainnya hanya memfilter data contoh
 const platforms: { key: PlatformType; label: string; icon: any; connected: boolean }[] = [
   { key: 'news', label: 'Portal Berita (RSS)', icon: Globe, connected: true },
+  { key: 'threads', label: 'Threads', icon: AtSign, connected: true },
   { key: 'x', label: 'X / Twitter', icon: Twitter, connected: false },
   { key: 'youtube', label: 'YouTube', icon: Youtube, connected: false },
   { key: 'tiktok', label: 'TikTok', icon: Video, connected: false },

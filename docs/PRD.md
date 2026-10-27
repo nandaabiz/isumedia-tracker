@@ -39,6 +39,7 @@ Aplikasi ini dibangun menggunakan arsitektur modern:
 - **FR-1.1.2**: Pengguna dapat membuat **Custom Monitoring Query** (kata kunci, tagar, frasa logika boolean `AND`/`OR`/`NOT`, dan filter entitas tokoh).
 - **FR-1.1.3**: **Media Source Filter**: Pengguna dapat menyalakan/mematikan sumber pemantauan:
   - Portal Berita Online (RSS & Scraper terverifikasi Dewan Pers)
+  - Threads (Post publik via Threads API `keyword_search`)
   - X / Twitter (Akun publik)
   - YouTube (Video & komentar publik)
   - TikTok (Video & deskripsi publik)
@@ -150,7 +151,7 @@ PocketBase bertindak sebagai backend microservice dan basis data relasional SQLi
 2. **`media_posts`**:
    - `id` (text, PK)
    - `topic_id` (relation -> `monitored_topics`)
-   - `platform` (select): `news`, `x`, `youtube`, `tiktok`, `forum`
+   - `platform` (select): `news`, `threads`, `x`, `youtube`, `tiktok`, `forum`
    - `external_id` (text): ID unik di platform asal
    - `author_handle` (text): Username publik
    - `author_name` (text): Display name

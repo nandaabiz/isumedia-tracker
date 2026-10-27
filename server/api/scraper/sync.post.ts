@@ -13,6 +13,8 @@ import {
   type AnalysisInputPost,
   type QueryNode
 } from '~/lib/issue-analysis'
+import { mapThreadsMedia, threadsSearchTerms } from '~/lib/threads'
+import { isThreadsConfigured, searchThreads } from '~/server/utils/threads'
 
 interface ScrapedPostItem extends AnalysisInputPost {
   timeAgo: string
@@ -25,6 +27,7 @@ interface ScrapedPostItem extends AnalysisInputPost {
 
 const PB_RECORD_ID = /^[a-z0-9]{15}$/
 const MAX_PERSISTED_PER_SYNC = 20
+const MAX_THREADS_TERMS = 3
 
 function cleanXmlText(text: string): string {
   return text
@@ -163,6 +166,40 @@ export default defineEventHandler(async (event) => {
     }
   } catch (err: any) {
     logs.push(`[${stamp()}] Antara RSS gagal: ${err?.message || 'timeout'}`)
+  }
+
+  // 3. Threads keyword search (post publik 7 hari terakhir), disaring ulang dengan kueri boolean
+  if (isThreadsConfigured()) {
+    const terms = threadsSearchTerms(ast)
+    if (terms.length > MAX_THREADS_TERMS) {
+      logs.push(`[${stamp()}] Threads: hanya ${MAX_THREADS_TERMS} dari ${terms.length} kata kunci yang dicari (batas kuota API).`)
+    }
+    for (const term of terms.slice(0, MAX_THREADS_TERMS)) {
+      try {
+        const { data, cached } = await searchThreads(term, 6000)
+        const parsed = data
+          .map(mapThreadsMedia)
+          .filter((post): post is AnalysisInputPost => !!post && matchesQuery(ast, post.content))
+          .map(post => {
+            const { sentiment, score } = analyzeSentiment(post.content)
+            return {
+              ...post,
+              authorName: post.source,
+              authorRole: 'Akun Publik Threads',
+              publishedAtLabel: formatWib(post.publishedAt),
+              timeAgo: formatRelative(post.publishedAt, now),
+              sentiment,
+              sentimentScore: score
+            }
+          })
+        scraped.push(...parsed)
+        logs.push(`[${stamp()}] Threads "${term}": ${parsed.length} post relevan${cached ? ' (cache)' : ''}.`)
+      } catch (err: any) {
+        logs.push(`[${stamp()}] Threads "${term}" gagal: ${err?.message || 'timeout'}`)
+      }
+    }
+  } else {
+    logs.push(`[${stamp()}] Threads dilewati: THREADS_ACCESS_TOKEN belum diatur.`)
   }
 
   // Dedupe hanya berdasarkan URL; judul identik dari media berbeda justru bukti duplikasi narasi

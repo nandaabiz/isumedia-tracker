@@ -412,7 +412,7 @@ export interface NewTopicInput {
 }
 
 const CUSTOM_TOPICS_STORAGE_KEY = 'isumedia_custom_topics'
-const ALL_PLATFORMS: PlatformType[] = ['news', 'x', 'youtube', 'tiktok', 'forum']
+const ALL_PLATFORMS: PlatformType[] = ['news', 'threads', 'x', 'youtube', 'tiktok', 'forum']
 
 function formatQuotes(quotes: NarrativeQuote[], emptyText: string): string {
   if (!quotes.length) return emptyText

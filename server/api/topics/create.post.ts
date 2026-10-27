@@ -46,7 +46,7 @@ export default defineEventHandler(async (event) => {
       trend_velocity: '',
       total_mentions: 0,
       status: 'active',
-      media_filter: ['news', 'x', 'youtube', 'tiktok', 'forum'],
+      media_filter: ['news', 'threads', 'x', 'youtube', 'tiktok', 'forum'],
       origin_timestamp: '',
       summary: String(body?.summary || `Pemantauan isu: ${title}`),
       pro_arguments: '',

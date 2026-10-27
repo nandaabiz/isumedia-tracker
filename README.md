@@ -25,7 +25,7 @@ Dibangun dengan **Nuxt.js 3**, **shadcn-vue** (Preset `--preset b2D2hq2C0`: Styl
 
 ### 2. Fitur 1: Media & Issue Tracker
 - **Pemantauan Isu Tren & Kustom**: Menyajikan isu terhangat (PPN 12%, Makan Bergizi Gratis, Pilkada Serentak) dan pembuatan kueri kustom baru.
-- **Filter Kanal Media Publik**: On/Off toggle untuk Portal Berita (RSS), X/Twitter publik, YouTube publik, TikTok publik, dan Forum (mengabaikan akun privat sesuai UU PDP No. 27/2022).
+- **Filter Kanal Media Publik**: On/Off toggle untuk Portal Berita (RSS), Threads publik, X/Twitter publik, YouTube publik, TikTok publik, dan Forum (mengabaikan akun privat sesuai UU PDP No. 27/2022).
 - **Origin Finder (*Timestamp Zero*)**: Rekonstruksi waktu menemukan akun pertama pemantik isu dengan presisi detik, reach, dan tautan asli.
 - **Amplification Network Graph**: Visualisasi graf interaktif (Origin -> KOL -> Buzzer/Bot Cluster -> News Media) dengan skor kemiripan teks Jaccard (96%).
 - **Sebaran Geografis Wilayah**: Intensitas perbincangan isu dan sentimen dominan per provinsi, dengan daftar publikasi per provinsi (drill-down).
@@ -70,6 +70,7 @@ Dashboard Admin PocketBase: **`http://127.0.0.1:8290/_/`**
 ```bash
 cp .env.example .env
 # isi NUXT_SESSION_SECRET (openssl rand -hex 32), PB_SERVICE_EMAIL, PB_SERVICE_PASSWORD
+# opsional: THREADS_ACCESS_TOKEN untuk konektor Threads
 ```
 
 ### 4. Menjalankan Unit Test & Migrasi Baru
@@ -92,7 +93,8 @@ Seluruh metrik dihitung dari data, bukan nilai statis:
 - **`lib/demography.ts`** (Modul 2): pemilihan tahun acuan BPS terdekat (maks. 4 tahun, menghormati batas wilayah sebelum/sesudah pemekaran Papua 2022), indeks pendidikan `(RLS/15 + HLS/18)/2`, tipologi urban, dan korelasi Pearson indikator BPS vs porsi suara capres antarprovinsi.
 
 Batasan saat ini:
-- Sumber riil baru Google News RSS & Antara RSS. X, YouTube, TikTok, dan forum belum memiliki konektor; RSS tidak menyediakan reach/engagement (ditampilkan `N/A`).
+- Sumber riil: Google News RSS, Antara RSS, dan Threads (Threads API `keyword_search`, aktif bila `THREADS_ACCESS_TOKEN` diisi). X, YouTube, TikTok, dan forum belum memiliki konektor; RSS dan Threads tidak menyediakan reach/engagement post publik (ditampilkan `N/A`).
+- Threads: token wajib punya izin `threads_basic` + `threads_keyword_search`; tanpa persetujuan App Review Meta, pencarian hanya mencakup post milik akun token. API tidak mendukung operator boolean, jadi server mencari maks. 3 kata kunci minimum yang mencakup kueri (`lib/threads.ts`) lalu menyaring ulang hasilnya dengan kueri boolean. Hasil per kata kunci di-cache 5 menit di memori proses (kuota API 2.200 kueri/24 jam).
 - Origin = publikasi paling awal dalam jendela perayapan 7 hari, bukan seluruh riwayat internet.
 - Data pemilu: 2014 mencakup 33 provinsi (Kaltara masih tergabung Kaltim), 2019 34 provinsi, 2024 38 provinsi; 4 provinsi Papua hasil pemekaran 2022 diklasifikasikan "data belum cukup". Rekap suara Pileg 2019 Kalimantan Selatan tidak tersedia di sumber terbuka (hanya kursi). Detail di `data/electoral/SOURCES-*.md`.
 - Data BPS: % perkotaan adalah proyeksi (berbasis SP2010) dan tidak tersedia untuk Kaltara serta 6 provinsi Papua pada 2024; sektor kerja per provinsi baru ada sejak 2021 (2019 memakai Agustus 2021, 2014 kosong); generasi untuk 2014 kosong (sumber terdekat SP2020). Pembanding legislatif untuk gubernur masih DPR RI karena kursi DPRD belum diimpor; DIY tidak menggelar Pilgub. Data Pilgub bersumber Wikipedia id + putusan MK (situs KPU daerah tidak dapat diakses); 6 entri periode 2014 tanpa koalisi pengusung terverifikasi sehingga keselarasannya tidak dihitung.

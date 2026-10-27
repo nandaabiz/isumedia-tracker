@@ -1,4 +1,4 @@
-export type PlatformType = 'news' | 'x' | 'youtube' | 'tiktok' | 'forum'
+export type PlatformType = 'news' | 'threads' | 'x' | 'youtube' | 'tiktok' | 'forum'
 
 export type SentimentType = 'positive' | 'neutral' | 'negative'
 

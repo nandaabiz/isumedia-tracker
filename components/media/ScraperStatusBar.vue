@@ -36,8 +36,8 @@ const showFeedDrawer = ref(false)
 
 function downloadCsv() {
   const csv = toCsv(
-    ['waktu_terbit', 'sumber', 'judul', 'sentimen', 'skor_sentimen', 'url'],
-    props.recentArticles.map(a => [a.publishedAt, a.source, a.title, a.sentiment, a.sentimentScore, a.url])
+    ['waktu_terbit', 'platform', 'sumber', 'judul', 'sentimen', 'skor_sentimen', 'url'],
+    props.recentArticles.map(a => [a.publishedAt, a.platform, a.source, a.title, a.sentiment, a.sentimentScore, a.url])
   )
   // BOM agar Excel membaca UTF-8 dengan benar
   const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8' })
@@ -68,7 +68,7 @@ function downloadCsv() {
         <div class="min-w-0">
           <div class="flex items-center gap-2">
             <span class="text-sm font-bold text-parchment-900 dark:text-parchment-100 flex flex-wrap items-center gap-x-1.5">
-              <span>Perayap RSS publik</span>
+              <span>Perayap media publik</span>
               <span
                 class="text-xs font-semibold"
                 :class="isCrawling ? 'text-amber-700 dark:text-amber-400' : 'text-emerald-700 dark:text-emerald-400'"
@@ -80,7 +80,7 @@ function downloadCsv() {
             <Badge 
               variant="outline" 
               class="hidden sm:inline-flex text-[10px] py-0 px-1.5"
-              title="Data dikumpulkan langsung dari feed berita terverifikasi publik dan disaring tanpa memuat akun privat warganet"
+              title="Data dikumpulkan dari feed berita publik dan post publik Threads; akun privat tidak pernah diambil"
             >
               Data Riil Publik
             </Badge>
@@ -158,7 +158,7 @@ function downloadCsv() {
             <span>Publikasi hasil perayapan terakhir</span>
           </h4>
           <p class="text-[11px] text-parchment-500 dark:text-parchment-400">
-            Sumber resmi: LKBN Antara, Google News Indonesia, dan jaringan portal pers terakreditasi
+            Sumber: LKBN Antara, Google News Indonesia, portal pers terakreditasi, dan post publik Threads
           </p>
         </div>
         <span class="text-[11px] font-mono text-parchment-500">
@@ -185,7 +185,7 @@ function downloadCsv() {
             <div class="flex items-center justify-between gap-2 mb-1.5">
               <span 
                 class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-parchment-100 dark:bg-monastic-700 text-parchment-700 dark:text-parchment-300 line-clamp-1"
-                :title="'Sumber portal berita: ' + art.source"
+                :title="(art.platform === 'threads' ? 'Akun Threads: ' : 'Sumber portal berita: ') + art.source"
               >
                 {{ art.source }}
               </span>
@@ -208,13 +208,13 @@ function downloadCsv() {
           </div>
 
           <div class="mt-2.5 pt-2 border-t border-parchment-100 dark:border-monastic-700/80 flex items-center justify-between text-[10px] text-parchment-500">
-            <span :title="'Waktu publikasi berita oleh redaksi: ' + art.publishedAt">{{ art.publishedAt }}</span>
+            <span :title="'Waktu publikasi: ' + art.publishedAt">{{ art.publishedAt }}</span>
             <a 
               :href="art.url" 
               target="_blank" 
               rel="noopener noreferrer"
               class="flex items-center gap-1 text-claret-700 hover:text-claret-800 dark:text-brass-400 font-semibold hover:underline cursor-pointer"
-              title="Buka artikel asli langsung di situs web penerbit"
+              :title="art.platform === 'threads' ? 'Buka post asli di Threads' : 'Buka artikel asli langsung di situs web penerbit'"
             >
               <span>Baca Sumber</span>
               <ExternalLink class="w-3 h-3" />

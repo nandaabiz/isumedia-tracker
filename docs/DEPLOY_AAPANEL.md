@@ -111,6 +111,8 @@ PORT=3020
 # Diisi di langkah 8, setelah akun servis PocketBase dibuat
 PB_SERVICE_EMAIL=
 PB_SERVICE_PASSWORD=
+# Opsional: konektor Threads (izin threads_basic + threads_keyword_search)
+THREADS_ACCESS_TOKEN=
 ```
 
 `HOST=127.0.0.1` membuat Nuxt hanya menerima koneksi dari Nginx di server yang sama. Ini penting: bila port 3020 terbuka ke publik, penyerang bisa memalsukan header `X-Forwarded-For` dan menghindari penguncian login.
@@ -205,7 +207,7 @@ curl -m 5 http://IP_VPS:3020   # harus gagal/timeout
 curl -m 5 http://IP_VPS:8290   # harus gagal/timeout
 ```
 
-Server juga perlu akses keluar (HTTPS) ke `news.google.com` dan `www.antaranews.com` untuk perayapan RSS.
+Server juga perlu akses keluar (HTTPS) ke `news.google.com` dan `www.antaranews.com` untuk perayapan RSS, serta `graph.threads.net` bila `THREADS_ACCESS_TOKEN` diisi.
 
 ## 11. Update aplikasi
 
