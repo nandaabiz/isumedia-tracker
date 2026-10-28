@@ -5,6 +5,7 @@ import {
   analyzeSentiment,
   formatRelative,
   formatWib,
+  keywordCoverTerms,
   keywordsToQuery,
   matchesQuery,
   normalizeText,
@@ -13,8 +14,16 @@ import {
   type AnalysisInputPost,
   type QueryNode
 } from '~/lib/issue-analysis'
-import { mapThreadsMedia, threadsSearchTerms } from '~/lib/threads'
+import { buildRedditQuery, mapRedditPost } from '~/lib/reddit'
+import { mapThreadsMedia } from '~/lib/threads'
+import { mapTikTokVideo } from '~/lib/tiktok'
+import { buildXQuery, mapXTweet } from '~/lib/x'
+import { buildYouTubeQuery, mapYouTubeVideo } from '~/lib/youtube'
+import { isRedditConfigured, redditSubreddits, searchReddit } from '~/server/utils/reddit'
 import { isThreadsConfigured, searchThreads } from '~/server/utils/threads'
+import { isTikTokConfigured, searchTikTok } from '~/server/utils/tiktok'
+import { isXConfigured, searchX } from '~/server/utils/x'
+import { isYouTubeConfigured, searchYouTube } from '~/server/utils/youtube'
 
 interface ScrapedPostItem extends AnalysisInputPost {
   timeAgo: string
@@ -25,9 +34,19 @@ interface ScrapedPostItem extends AnalysisInputPost {
   sentimentScore: number
 }
 
+interface SourceResult {
+  items: ScrapedPostItem[]
+  logs: string[]
+}
+
 const PB_RECORD_ID = /^[a-z0-9]{15}$/
 const MAX_PERSISTED_PER_SYNC = 20
+const SOCIAL_TIMEOUT_MS = 6000
+// Threads: satu request per kata kunci; TikTok: semua kata kunci dalam satu operasi IN
 const MAX_THREADS_TERMS = 3
+const MAX_TIKTOK_TERMS = 10
+
+const stamp = () => new Date().toLocaleTimeString('id-ID')
 
 function cleanXmlText(text: string): string {
   return text
@@ -118,6 +137,110 @@ function matchesEntities(item: ScrapedPostItem, entities: string[]): boolean {
   return entities.every(e => text.includes(` ${normalizeText(e)} `))
 }
 
+/** Post sosial yang lolos kueri boolean, dilengkapi sentimen dan label waktu untuk feed. */
+function toScrapedItems(posts: (AnalysisInputPost | null)[], ast: QueryNode | null, authorRole: string, now: number): ScrapedPostItem[] {
+  return posts
+    .filter((post): post is AnalysisInputPost => !!post && matchesQuery(ast, `${post.title} ${post.content}`))
+    .map(post => {
+      const { sentiment, score } = analyzeSentiment(post.content)
+      return {
+        ...post,
+        authorName: post.source,
+        authorRole,
+        publishedAtLabel: formatWib(post.publishedAt),
+        timeAgo: formatRelative(post.publishedAt, now),
+        sentiment,
+        sentimentScore: score
+      }
+    })
+}
+
+function skipped(message: string): SourceResult {
+  return { items: [], logs: [`[${stamp()}] ${message}`] }
+}
+
+async function collectSource(
+  label: string,
+  authorRole: string,
+  ast: QueryNode | null,
+  now: number,
+  search: () => Promise<{ posts: (AnalysisInputPost | null)[]; cached: boolean }>
+): Promise<SourceResult> {
+  try {
+    const { posts, cached } = await search()
+    const items = toScrapedItems(posts, ast, authorRole, now)
+    return { items, logs: [`[${stamp()}] ${label}: ${items.length} post relevan${cached ? ' (cache)' : ''}.`] }
+  } catch (err: any) {
+    return skipped(`${label} gagal: ${err?.message || 'timeout'}`)
+  }
+}
+
+/** Threads keyword search tanpa operator boolean: satu pencarian per kata kunci minimum. */
+async function collectThreads(ast: QueryNode | null, now: number): Promise<SourceResult> {
+  if (!isThreadsConfigured()) return skipped('Threads dilewati: THREADS_ACCESS_TOKEN belum diatur.')
+  const terms = keywordCoverTerms(ast)
+  if (!terms.length) return skipped('Threads dilewati: kueri tidak memuat kata kunci positif.')
+  const result: SourceResult = { items: [], logs: [] }
+  if (terms.length > MAX_THREADS_TERMS) {
+    result.logs.push(`[${stamp()}] Threads: hanya ${MAX_THREADS_TERMS} dari ${terms.length} kata kunci yang dicari (batas kuota API).`)
+  }
+  for (const term of terms.slice(0, MAX_THREADS_TERMS)) {
+    const r = await collectSource(`Threads "${term}"`, 'Akun Publik Threads', ast, now, async () => {
+      const { data, cached } = await searchThreads(term, SOCIAL_TIMEOUT_MS)
+      return { posts: data.map(mapThreadsMedia), cached }
+    })
+    result.items.push(...r.items)
+    result.logs.push(...r.logs)
+  }
+  return result
+}
+
+async function collectX(ast: QueryNode | null, now: number): Promise<SourceResult> {
+  if (!isXConfigured()) return skipped('X dilewati: X_BEARER_TOKEN belum diatur.')
+  const query = buildXQuery(ast)
+  if (!query) return skipped('X dilewati: kueri tidak memuat kata kunci positif atau melebihi batas 512 karakter.')
+  return collectSource('X', 'Akun Publik X', ast, now, async () => {
+    const { data, cached } = await searchX(query, SOCIAL_TIMEOUT_MS)
+    const usersById = new Map(data.users.map(u => [u.id, u]))
+    return { posts: data.tweets.map(t => mapXTweet(t, usersById)), cached }
+  })
+}
+
+async function collectYouTube(ast: QueryNode | null, now: number): Promise<SourceResult> {
+  if (!isYouTubeConfigured()) return skipped('YouTube dilewati: YOUTUBE_API_KEY belum diatur.')
+  const query = buildYouTubeQuery(ast)
+  if (!query) return skipped('YouTube dilewati: kueri tidak memuat kata kunci positif.')
+  return collectSource('YouTube', 'Kanal Publik YouTube', ast, now, async () => {
+    const { data, cached } = await searchYouTube(query, SOCIAL_TIMEOUT_MS)
+    return { posts: data.items.map(i => mapYouTubeVideo(i, data.statsById[i.id?.videoId ?? ''])), cached }
+  })
+}
+
+async function collectTikTok(ast: QueryNode | null, now: number): Promise<SourceResult> {
+  if (!isTikTokConfigured()) return skipped('TikTok dilewati: TIKTOK_CLIENT_KEY / TIKTOK_CLIENT_SECRET belum diatur.')
+  const terms = keywordCoverTerms(ast)
+  if (!terms.length) return skipped('TikTok dilewati: kueri tidak memuat kata kunci positif.')
+  const result = await collectSource('TikTok', 'Akun Publik TikTok', ast, now, async () => {
+    const { data, cached } = await searchTikTok(terms.slice(0, MAX_TIKTOK_TERMS), SOCIAL_TIMEOUT_MS)
+    return { posts: data.map(mapTikTokVideo), cached }
+  })
+  if (terms.length > MAX_TIKTOK_TERMS) {
+    result.logs.unshift(`[${stamp()}] TikTok: hanya ${MAX_TIKTOK_TERMS} dari ${terms.length} kata kunci yang dicari.`)
+  }
+  return result
+}
+
+async function collectForum(ast: QueryNode | null, now: number): Promise<SourceResult> {
+  if (!isRedditConfigured()) return skipped('Forum Reddit dilewati: REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET belum diatur.')
+  const query = buildRedditQuery(ast)
+  if (!query) return skipped('Forum Reddit dilewati: kueri tidak memuat kata kunci positif atau melebihi batas 512 karakter.')
+  const label = `Forum Reddit (${redditSubreddits().map(s => `r/${s}`).join(', ')})`
+  return collectSource(label, 'Anggota Forum Publik', ast, now, async () => {
+    const { data, cached } = await searchReddit(query, SOCIAL_TIMEOUT_MS)
+    return { posts: data.map(mapRedditPost), cached }
+  })
+}
+
 export default defineEventHandler(async (event) => {
   const body = await readBody(event).catch(() => ({}))
   const topicTitle: string = String(body?.topicTitle || '').trim()
@@ -140,8 +263,16 @@ export default defineEventHandler(async (event) => {
 
   const now = Date.now()
   const logs: string[] = []
-  const stamp = () => new Date().toLocaleTimeString('id-ID')
   const scraped: ScrapedPostItem[] = []
+
+  // Konektor media sosial & forum berjalan paralel dengan RSS; masing-masing dilewati bila kredensial belum diatur
+  const socialResults = Promise.all([
+    collectThreads(ast, now),
+    collectX(ast, now),
+    collectYouTube(ast, now),
+    collectTikTok(ast, now),
+    collectForum(ast, now)
+  ])
 
   // 1. Google News RSS (pencarian 7 hari terakhir)
   try {
@@ -168,38 +299,10 @@ export default defineEventHandler(async (event) => {
     logs.push(`[${stamp()}] Antara RSS gagal: ${err?.message || 'timeout'}`)
   }
 
-  // 3. Threads keyword search (post publik 7 hari terakhir), disaring ulang dengan kueri boolean
-  if (isThreadsConfigured()) {
-    const terms = threadsSearchTerms(ast)
-    if (terms.length > MAX_THREADS_TERMS) {
-      logs.push(`[${stamp()}] Threads: hanya ${MAX_THREADS_TERMS} dari ${terms.length} kata kunci yang dicari (batas kuota API).`)
-    }
-    for (const term of terms.slice(0, MAX_THREADS_TERMS)) {
-      try {
-        const { data, cached } = await searchThreads(term, 6000)
-        const parsed = data
-          .map(mapThreadsMedia)
-          .filter((post): post is AnalysisInputPost => !!post && matchesQuery(ast, post.content))
-          .map(post => {
-            const { sentiment, score } = analyzeSentiment(post.content)
-            return {
-              ...post,
-              authorName: post.source,
-              authorRole: 'Akun Publik Threads',
-              publishedAtLabel: formatWib(post.publishedAt),
-              timeAgo: formatRelative(post.publishedAt, now),
-              sentiment,
-              sentimentScore: score
-            }
-          })
-        scraped.push(...parsed)
-        logs.push(`[${stamp()}] Threads "${term}": ${parsed.length} post relevan${cached ? ' (cache)' : ''}.`)
-      } catch (err: any) {
-        logs.push(`[${stamp()}] Threads "${term}" gagal: ${err?.message || 'timeout'}`)
-      }
-    }
-  } else {
-    logs.push(`[${stamp()}] Threads dilewati: THREADS_ACCESS_TOKEN belum diatur.`)
+  // 3. Threads, X, YouTube, TikTok, forum publik: disaring ulang dengan kueri boolean
+  for (const result of await socialResults) {
+    scraped.push(...result.items)
+    logs.push(...result.logs)
   }
 
   // Dedupe hanya berdasarkan URL; judul identik dari media berbeda justru bukti duplikasi narasi

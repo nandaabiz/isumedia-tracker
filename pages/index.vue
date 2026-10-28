@@ -6,7 +6,9 @@ import { useIssueTracker } from '~/composables/useIssueTracker'
 import { useElectoral } from '~/composables/useElectoral'
 import { useScraperStream, type SyncTopic } from '~/composables/useScraperStream'
 import { useReportExport, type DeliveryMode } from '~/composables/useReportExport'
+import { apiFetch } from '~/composables/useApi'
 import type { ElectionYear } from '~/types/electoral'
+import type { PlatformType } from '~/types/issue'
 
 import AppHeader from '~/components/AppHeader.vue'
 import Badge from '~/components/ui/Badge.vue'
@@ -131,9 +133,13 @@ function exportElectoral(mode: DeliveryMode) {
   }, mode)
 }
 
-onMounted(() => {
+const configuredPlatforms = ref<PlatformType[] | null>(null)
+
+onMounted(async () => {
   initAuth()
   startBackgroundWorker(activeSyncTopic)
+  const status = await apiFetch<{ configuredPlatforms: PlatformType[] }>('/api/scraper/status').catch(() => null)
+  configuredPlatforms.value = status?.configuredPlatforms ?? null
 })
 
 onUnmounted(() => {
@@ -307,6 +313,7 @@ watch(activeTopicId, syncActiveTopic)
 
         <MediaFilterBar
           :active-sources="filterMediaSources"
+          :configured-sources="configuredPlatforms"
           @toggle="toggleMediaSource"
         />
 

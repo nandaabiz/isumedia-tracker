@@ -1,14 +1,13 @@
 import type { ThreadsMedia } from '~/lib/threads'
+import { createTtlCache } from '~/server/utils/ttl-cache'
 
 const THREADS_SEARCH_URL = 'https://graph.threads.net/v1.0/keyword_search'
 const THREADS_FIELDS = 'id,text,media_type,permalink,timestamp,username,is_reply,is_quote_post'
-// Batas Threads API: 2.200 kueri / 24 jam per pengguna; tiap kueri dihitung walau kata kuncinya sama.
-// Sinkronisasi klien berjalan tiap 45 detik, jadi hasil per kata kunci disimpan sementara.
+// Batas Threads API: 2.200 kueri / 24 jam per pengguna; tiap kueri dihitung walau kata kuncinya sama
 const CACHE_TTL_MS = 5 * 60 * 1000
 const SEARCH_WINDOW_SEC = 7 * 24 * 3600
 
-// Cache di memori proses: cukup untuk satu instance (sama seperti login lockout)
-const cache = new Map<string, { expiresAt: number; data: ThreadsMedia[] }>()
+const cache = createTtlCache<ThreadsMedia[]>(CACHE_TTL_MS)
 
 export function isThreadsConfigured(): boolean {
   return !!process.env.THREADS_ACCESS_TOKEN
@@ -23,7 +22,7 @@ export async function searchThreads(term: string, timeoutMs: number): Promise<{ 
 
   const key = term.toLowerCase()
   const hit = cache.get(key)
-  if (hit && hit.expiresAt > Date.now()) return { data: hit.data, cached: true }
+  if (hit) return { data: hit, cached: true }
 
   const params = new URLSearchParams({
     q: term,
@@ -40,7 +39,6 @@ export async function searchThreads(term: string, timeoutMs: number): Promise<{ 
     throw new ThreadsApiError(body?.error?.message || `HTTP ${res.status}`)
   }
 
-  for (const [k, v] of cache) if (v.expiresAt <= Date.now()) cache.delete(k)
-  cache.set(key, { expiresAt: Date.now() + CACHE_TTL_MS, data: body.data })
+  cache.set(key, body.data)
   return { data: body.data, cached: false }
 }

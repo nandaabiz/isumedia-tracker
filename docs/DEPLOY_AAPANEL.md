@@ -111,8 +111,15 @@ PORT=3020
 # Diisi di langkah 8, setelah akun servis PocketBase dibuat
 PB_SERVICE_EMAIL=
 PB_SERVICE_PASSWORD=
-# Opsional: konektor Threads (izin threads_basic + threads_keyword_search)
+# Opsional: konektor media sosial & forum. Kosong = kanal dilewati saat perayapan
 THREADS_ACCESS_TOKEN=
+X_BEARER_TOKEN=
+YOUTUBE_API_KEY=
+TIKTOK_CLIENT_KEY=
+TIKTOK_CLIENT_SECRET=
+REDDIT_CLIENT_ID=
+REDDIT_CLIENT_SECRET=
+REDDIT_SUBREDDITS=indonesia
 ```
 
 `HOST=127.0.0.1` membuat Nuxt hanya menerima koneksi dari Nginx di server yang sama. Ini penting: bila port 3020 terbuka ke publik, penyerang bisa memalsukan header `X-Forwarded-For` dan menghindari penguncian login.
@@ -207,7 +214,7 @@ curl -m 5 http://IP_VPS:3020   # harus gagal/timeout
 curl -m 5 http://IP_VPS:8290   # harus gagal/timeout
 ```
 
-Server juga perlu akses keluar (HTTPS) ke `news.google.com` dan `www.antaranews.com` untuk perayapan RSS, serta `graph.threads.net` bila `THREADS_ACCESS_TOKEN` diisi.
+Server juga perlu akses keluar (HTTPS) ke `news.google.com` dan `www.antaranews.com` untuk perayapan RSS, serta host API konektor yang kredensialnya diisi: `graph.threads.net` (Threads), `api.x.com` (X), `www.googleapis.com` (YouTube), `open.tiktokapis.com` (TikTok), `www.reddit.com` dan `oauth.reddit.com` (forum Reddit).
 
 ## 11. Update aplikasi
 

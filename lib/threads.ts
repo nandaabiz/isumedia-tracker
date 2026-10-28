@@ -1,9 +1,9 @@
 /**
- * Konektor Threads (Meta Threads API `keyword_search`): pemetaan kueri boolean dan normalisasi hasil.
+ * Konektor Threads (Meta Threads API `keyword_search`): normalisasi hasil. Kata kunci pencarian dari `keywordCoverTerms`.
  *
  * Pure functions agar dapat diuji langsung dengan `node --test`; HTTP client ada di server/utils/threads.ts.
  */
-import type { AnalysisInputPost, QueryNode } from './issue-analysis.ts'
+import type { AnalysisInputPost } from './issue-analysis.ts'
 
 export interface ThreadsMedia {
   id: string
@@ -14,42 +14,6 @@ export interface ThreadsMedia {
   username?: string
   is_reply?: boolean
   is_quote_post?: boolean
-}
-
-/**
- * Threads keyword search tidak mendukung operator boolean. Fungsi ini memilih himpunan kata kunci
- * minimum yang menjamin setiap post yang cocok dengan kueri pasti mengandung salah satunya:
- * OR = gabungan kedua sisi, AND = sisi dengan kata kunci paling sedikit, NOT = tidak dapat dicari.
- * Hasil pencarian kemudian disaring ulang dengan `matchesQuery` di server.
- */
-export function threadsSearchTerms(node: QueryNode | null): string[] {
-  const collect = (n: QueryNode): string[] | null => {
-    switch (n.type) {
-      case 'term': return [n.value]
-      case 'not': return null
-      case 'or': {
-        const left = collect(n.left)
-        const right = collect(n.right)
-        // Satu sisi OR tanpa kata kunci positif berarti kueri tidak dapat dicakup secara lengkap
-        return left && right ? [...left, ...right] : null
-      }
-      case 'and': {
-        const left = collect(n.left)
-        const right = collect(n.right)
-        if (!left) return right
-        if (!right) return left
-        return left.length <= right.length ? left : right
-      }
-    }
-  }
-  if (!node) return []
-  const seen = new Set<string>()
-  return (collect(node) ?? []).filter(term => {
-    const key = term.toLowerCase()
-    if (seen.has(key)) return false
-    seen.add(key)
-    return true
-  })
 }
 
 export function mapThreadsMedia(media: ThreadsMedia): AnalysisInputPost | null {

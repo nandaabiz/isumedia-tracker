@@ -4,21 +4,24 @@ import type { PlatformType } from '~/types/issue'
 
 interface Props {
   activeSources: PlatformType[]
+  /** Kanal yang kredensial konektornya terpasang di server; `null` = status belum dimuat */
+  configuredSources?: PlatformType[] | null
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), { configuredSources: null })
+
+const isUnconfigured = (platform: PlatformType) => !!props.configuredSources && !props.configuredSources.includes(platform)
 const emit = defineEmits<{
   (e: 'toggle', platform: PlatformType): void
 }>()
 
-// `connected`: kanal yang sudah punya konektor perayapan riil; lainnya hanya memfilter data contoh
-const platforms: { key: PlatformType; label: string; icon: any; connected: boolean }[] = [
-  { key: 'news', label: 'Portal Berita (RSS)', icon: Globe, connected: true },
-  { key: 'threads', label: 'Threads', icon: AtSign, connected: true },
-  { key: 'x', label: 'X / Twitter', icon: Twitter, connected: false },
-  { key: 'youtube', label: 'YouTube', icon: Youtube, connected: false },
-  { key: 'tiktok', label: 'TikTok', icon: Video, connected: false },
-  { key: 'forum', label: 'Forum publik', icon: MessageSquare, connected: false }
+const platforms: { key: PlatformType; label: string; icon: any }[] = [
+  { key: 'news', label: 'Portal Berita (RSS)', icon: Globe },
+  { key: 'threads', label: 'Threads', icon: AtSign },
+  { key: 'x', label: 'X / Twitter', icon: Twitter },
+  { key: 'youtube', label: 'YouTube', icon: Youtube },
+  { key: 'tiktok', label: 'TikTok', icon: Video },
+  { key: 'forum', label: 'Forum publik (Reddit)', icon: MessageSquare }
 ]
 </script>
 
@@ -35,7 +38,7 @@ const platforms: { key: PlatformType; label: string; icon: any; connected: boole
         type="button"
         :aria-pressed="activeSources.includes(p.key)"
         @click="emit('toggle', p.key)"
-        :title="p.connected ? `Saluran ${p.label}` : `${p.label}: konektor perayapan belum aktif; filter hanya berlaku untuk data contoh`"
+        :title="isUnconfigured(p.key) ? `${p.label}: kredensial API belum diatur di server, kanal ini belum dirayapi` : `Saluran ${p.label}`"
         :class="[
           'flex items-center gap-1.5 px-3 h-10 sm:h-9 rounded-md text-xs font-medium border transition-colors cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-claret-700 dark:focus-visible:ring-brass-400',
           activeSources.includes(p.key)
@@ -45,7 +48,7 @@ const platforms: { key: PlatformType; label: string; icon: any; connected: boole
       >
         <component :is="p.icon" class="w-3.5 h-3.5" aria-hidden="true" />
         <span>{{ p.label }}</span>
-        <span v-if="!p.connected" class="text-[10px] font-normal text-parchment-500">segera</span>
+        <span v-if="isUnconfigured(p.key)" class="text-[10px] font-normal text-parchment-500">belum diatur</span>
       </button>
     </div>
 

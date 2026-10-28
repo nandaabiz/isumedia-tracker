@@ -40,10 +40,10 @@ Aplikasi ini dibangun menggunakan arsitektur modern:
 - **FR-1.1.3**: **Media Source Filter**: Pengguna dapat menyalakan/mematikan sumber pemantauan:
   - Portal Berita Online (RSS & Scraper terverifikasi Dewan Pers)
   - Threads (Post publik via Threads API `keyword_search`)
-  - X / Twitter (Akun publik)
-  - YouTube (Video & komentar publik)
-  - TikTok (Video & deskripsi publik)
-  - Facebook Pages / Forum Publik
+  - X / Twitter (Post publik via X API v2 recent search)
+  - YouTube (Video publik via YouTube Data API v3)
+  - TikTok (Deskripsi video publik via TikTok Research API)
+  - Forum Publik (Thread subreddit Indonesia via Reddit API)
   - *Strict Exclusion*: Sistem mengabaikan seluruh akun pribadi/privat.
 
 #### 1.2 Origin & Amplification Network (Pemantik & Duplikasi)
@@ -125,7 +125,7 @@ PocketBase bertindak sebagai backend microservice dan basis data relasional SQLi
 ```
 [Collections di PocketBase]
 ├── users (Admin, Analyst, Viewer)
-├── media_sources (Konfigurasi sumber media: x, news, youtube, tiktok)
+├── media_sources (Konfigurasi sumber media: news, threads, x, youtube, tiktok, forum)
 ├── monitored_topics (Daftar topik / isu yang dipantau)
 ├── media_posts (Postingan media publik, sentiment, coordinates, author)
 ├── post_amplifications (Relasi graph: parent_post_id -> child_post_id, delay_sec, similarity)

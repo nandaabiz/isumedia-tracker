@@ -15,6 +15,7 @@ import {
 import Badge from '~/components/ui/Badge.vue'
 import Button from '~/components/ui/Button.vue'
 import type { StreamedArticle } from '~/composables/useScraperStream'
+import type { PlatformType } from '~/types/issue'
 import { toCsv } from '~/lib/csv'
 
 interface Props {
@@ -33,6 +34,15 @@ const emit = defineEmits<{
 }>()
 
 const showFeedDrawer = ref(false)
+
+const SOURCE_TITLE: Record<PlatformType, { source: string; open: string }> = {
+  news: { source: 'Sumber portal berita: ', open: 'Buka artikel asli langsung di situs web penerbit' },
+  threads: { source: 'Akun Threads: ', open: 'Buka post asli di Threads' },
+  x: { source: 'Akun X: ', open: 'Buka post asli di X' },
+  youtube: { source: 'Kanal YouTube: ', open: 'Buka video asli di YouTube' },
+  tiktok: { source: 'Akun TikTok: ', open: 'Buka video asli di TikTok' },
+  forum: { source: 'Akun forum Reddit: ', open: 'Buka thread asli di forum' }
+}
 
 function downloadCsv() {
   const csv = toCsv(
@@ -80,7 +90,7 @@ function downloadCsv() {
             <Badge 
               variant="outline" 
               class="hidden sm:inline-flex text-[10px] py-0 px-1.5"
-              title="Data dikumpulkan dari feed berita publik dan post publik Threads; akun privat tidak pernah diambil"
+              title="Data dikumpulkan dari feed berita publik serta post/video publik Threads, X, YouTube, TikTok, dan forum Reddit; akun privat tidak pernah diambil"
             >
               Data Riil Publik
             </Badge>
@@ -158,7 +168,7 @@ function downloadCsv() {
             <span>Publikasi hasil perayapan terakhir</span>
           </h4>
           <p class="text-[11px] text-parchment-500 dark:text-parchment-400">
-            Sumber: LKBN Antara, Google News Indonesia, portal pers terakreditasi, dan post publik Threads
+            Sumber: LKBN Antara, Google News Indonesia, portal pers terakreditasi, Threads, X, YouTube, TikTok, dan forum Reddit
           </p>
         </div>
         <span class="text-[11px] font-mono text-parchment-500">
@@ -185,7 +195,7 @@ function downloadCsv() {
             <div class="flex items-center justify-between gap-2 mb-1.5">
               <span 
                 class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-parchment-100 dark:bg-monastic-700 text-parchment-700 dark:text-parchment-300 line-clamp-1"
-                :title="(art.platform === 'threads' ? 'Akun Threads: ' : 'Sumber portal berita: ') + art.source"
+                :title="SOURCE_TITLE[art.platform].source + art.source"
               >
                 {{ art.source }}
               </span>
@@ -214,7 +224,7 @@ function downloadCsv() {
               target="_blank" 
               rel="noopener noreferrer"
               class="flex items-center gap-1 text-claret-700 hover:text-claret-800 dark:text-brass-400 font-semibold hover:underline cursor-pointer"
-              :title="art.platform === 'threads' ? 'Buka post asli di Threads' : 'Buka artikel asli langsung di situs web penerbit'"
+              :title="SOURCE_TITLE[art.platform].open"
             >
               <span>Baca Sumber</span>
               <ExternalLink class="w-3 h-3" />

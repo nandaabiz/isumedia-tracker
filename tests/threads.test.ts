@@ -1,17 +1,17 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { matchesQuery, parseBooleanQuery } from '../lib/issue-analysis.ts'
-import { mapThreadsMedia, threadsSearchTerms } from '../lib/threads.ts'
+import { keywordCoverTerms, matchesQuery, parseBooleanQuery } from '../lib/issue-analysis.ts'
+import { mapThreadsMedia } from '../lib/threads.ts'
 
-test('kata kunci Threads mencakup kueri boolean dengan jumlah minimum', () => {
-  assert.deepEqual(threadsSearchTerms(parseBooleanQuery('"PPN 12%" OR sembako OR ppn')), ['ppn 12%', 'sembako', 'ppn'])
+test('kata kunci minimum mencakup kueri boolean dengan jumlah minimum', () => {
+  assert.deepEqual(keywordCoverTerms(parseBooleanQuery('"PPN 12%" OR sembako OR ppn')), ['ppn 12%', 'sembako', 'ppn'])
   // AND: cukup cari sisi dengan kata kunci paling sedikit, sisanya disaring matchesQuery
-  assert.deepEqual(threadsSearchTerms(parseBooleanQuery('"makan bergizi" AND (sekolah OR siswa) NOT hoaks')), ['makan bergizi'])
-  assert.deepEqual(threadsSearchTerms(parseBooleanQuery('(ppn OR pajak) AND (sembako OR beras OR minyak)')), ['ppn', 'pajak'])
-  assert.deepEqual(threadsSearchTerms(parseBooleanQuery('MBG OR mbg')), ['mbg'])
+  assert.deepEqual(keywordCoverTerms(parseBooleanQuery('"makan bergizi" AND (sekolah OR siswa) NOT hoaks')), ['makan bergizi'])
+  assert.deepEqual(keywordCoverTerms(parseBooleanQuery('(ppn OR pajak) AND (sembako OR beras OR minyak)')), ['ppn', 'pajak'])
+  assert.deepEqual(keywordCoverTerms(parseBooleanQuery('MBG OR mbg')), ['mbg'])
   // Sisi OR yang hanya berisi NOT tidak dapat dicari lewat kata kunci
-  assert.deepEqual(threadsSearchTerms(parseBooleanQuery('ppn OR -hoaks')), [])
-  assert.deepEqual(threadsSearchTerms(null), [])
+  assert.deepEqual(keywordCoverTerms(parseBooleanQuery('ppn OR -hoaks')), [])
+  assert.deepEqual(keywordCoverTerms(null), [])
 })
 
 test('pemetaan media Threads ke post analisa', () => {

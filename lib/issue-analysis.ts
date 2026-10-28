@@ -224,6 +224,42 @@ export function toSearchEngineQuery(node: QueryNode | null): string {
   }
 }
 
+/**
+ * Himpunan kata kunci minimum yang menjamin setiap post yang cocok dengan kueri pasti mengandung
+ * salah satunya, untuk API pencarian yang tidak mendukung operator boolean (atau panjang kuerinya terbatas):
+ * OR = gabungan kedua sisi, AND = sisi dengan kata kunci paling sedikit, NOT = tidak dapat dicari.
+ * Hasil pencarian kemudian disaring ulang dengan `matchesQuery` di server.
+ */
+export function keywordCoverTerms(node: QueryNode | null): string[] {
+  const collect = (n: QueryNode): string[] | null => {
+    switch (n.type) {
+      case 'term': return [n.value]
+      case 'not': return null
+      case 'or': {
+        const left = collect(n.left)
+        const right = collect(n.right)
+        // Satu sisi OR tanpa kata kunci positif berarti kueri tidak dapat dicakup secara lengkap
+        return left && right ? [...left, ...right] : null
+      }
+      case 'and': {
+        const left = collect(n.left)
+        const right = collect(n.right)
+        if (!left) return right
+        if (!right) return left
+        return left.length <= right.length ? left : right
+      }
+    }
+  }
+  if (!node) return []
+  const seen = new Set<string>()
+  return (collect(node) ?? []).filter(term => {
+    const key = term.toLowerCase()
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
+}
+
 /** Kueri default dari daftar kata kunci: kata kunci digabung OR. */
 export function keywordsToQuery(keywords: string[]): string {
   return keywords
