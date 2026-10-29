@@ -140,6 +140,9 @@ onMounted(async () => {
   startBackgroundWorker(activeSyncTopic)
   const status = await apiFetch<{ configuredPlatforms: PlatformType[] }>('/api/scraper/status').catch(() => null)
   configuredPlatforms.value = status?.configuredPlatforms ?? null
+  // Kanal tanpa kredensial tidak pernah dirayapi, jadi tidak ikut filter aktif
+  const configured = configuredPlatforms.value
+  if (configured?.length) filterMediaSources.value = filterMediaSources.value.filter(p => configured.includes(p))
 })
 
 onUnmounted(() => {
@@ -207,7 +210,7 @@ watch(activeTopicId, syncActiveTopic)
             <div class="min-w-0">
               <h3 class="font-serif font-bold text-lg text-parchment-900 dark:text-parchment-50">Isu Pantauan</h3>
               <p class="text-xs text-parchment-600 dark:text-parchment-400">
-                Pilih isu untuk dianalisis, atau buat kueri pemantauan sendiri
+                10 tema trend Google Berita (2 per kategori, 48 jam terakhir), diperbarui otomatis. Pilih untuk dianalisis, atau buat kueri sendiri
               </p>
             </div>
             <button

@@ -1,6 +1,7 @@
 import { ref, computed, onMounted } from 'vue'
 import { apiFetch } from '~/composables/useApi'
 import { useScraperStream } from '~/composables/useScraperStream'
+import { LATEST_ISSUE_ID_PREFIX } from '~/lib/latest-issues'
 import type {
   MonitoredTopic,
   OriginPost,
@@ -518,7 +519,7 @@ export function useIssueTracker() {
 
   function saveCustomTopicsCache() {
     try {
-      const custom = topics.value.filter(t => !SEED_TOPICS.some(s => s.id === t.id))
+      const custom = topics.value.filter(t => isCustomTopic(t.id))
       localStorage.setItem(CUSTOM_TOPICS_STORAGE_KEY, JSON.stringify(custom))
     } catch (err) {
       console.warn('[Custom Topic Cache]:', err)
@@ -574,7 +575,7 @@ export function useIssueTracker() {
     }
   }
 
-  const isCustomTopic = (id: string) => !SEED_TOPICS.some(s => s.id === id)
+  const isCustomTopic = (id: string) => !SEED_TOPICS.some(s => s.id === id) && !id.startsWith(LATEST_ISSUE_ID_PREFIX)
 
   async function archiveTopic(id: string) {
     if (!isCustomTopic(id)) return
@@ -629,8 +630,18 @@ export function useIssueTracker() {
     }
   }
 
+  /** 10 tema trend Google Berita (2 per kategori) menggantikan topik contoh; bila gagal, topik contoh tetap tampil sebagai fallback offline. */
+  async function loadLatestTopics() {
+    const res = await apiFetch<{ success: boolean; topics: MonitoredTopic[] }>('/api/topics/latest').catch(() => null)
+    if (!res?.success || !res.topics?.length) return
+    const latest = res.topics.filter(l => !topics.value.some(t => isCustomTopic(t.id) && t.title.toLowerCase() === l.title.toLowerCase()))
+    topics.value = [...latest, ...topics.value.filter(t => isCustomTopic(t.id))]
+    if (!topics.value.some(t => t.id === activeTopicId.value)) activeTopicId.value = topics.value[0]?.id ?? ''
+  }
+
   onMounted(() => {
     loadPersistedTopics()
+    loadLatestTopics()
   })
 
   return {
