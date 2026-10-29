@@ -14,7 +14,7 @@ export default defineEventHandler(async () => {
 
     const records = await pb.collection('monitored_topics').getFullList({
       sort: '-created',
-      filter: "status != 'archived'"
+      filter: "status != 'archived' && trend_key = ''"
     })
 
     return {

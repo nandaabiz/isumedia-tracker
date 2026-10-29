@@ -37,13 +37,16 @@ const platforms: { key: PlatformType; label: string; icon: any }[] = [
         :key="p.key"
         type="button"
         :aria-pressed="activeSources.includes(p.key)"
+        :disabled="isUnconfigured(p.key)"
         @click="emit('toggle', p.key)"
         :title="isUnconfigured(p.key) ? `${p.label}: kredensial API belum diatur di server, kanal ini belum dirayapi` : `Saluran ${p.label}`"
         :class="[
-          'flex items-center gap-1.5 px-3 h-10 sm:h-9 rounded-md text-xs font-medium border transition-colors cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-claret-700 dark:focus-visible:ring-brass-400',
-          activeSources.includes(p.key)
-            ? 'bg-white dark:bg-monastic-700 text-claret-800 dark:text-brass-300 border-claret-300 dark:border-brass-600 shadow-sm'
-            : 'bg-parchment-200/50 dark:bg-monastic-900/50 text-parchment-500 dark:text-parchment-400 border-dashed border-parchment-300 dark:border-monastic-700 opacity-60 hover:opacity-100'
+          'flex items-center gap-1.5 px-3 h-10 sm:h-9 rounded-md text-xs font-medium border transition-colors select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-claret-700 dark:focus-visible:ring-brass-400',
+          isUnconfigured(p.key)
+            ? 'bg-parchment-200/50 dark:bg-monastic-900/50 text-parchment-500 dark:text-parchment-500 border-dashed border-parchment-300 dark:border-monastic-700 opacity-50 cursor-not-allowed'
+            : activeSources.includes(p.key)
+              ? 'bg-white dark:bg-monastic-700 text-claret-800 dark:text-brass-300 border-claret-300 dark:border-brass-600 shadow-sm cursor-pointer'
+              : 'cursor-pointer bg-parchment-200/50 dark:bg-monastic-900/50 text-parchment-500 dark:text-parchment-400 border-dashed border-parchment-300 dark:border-monastic-700 opacity-60 hover:opacity-100'
         ]"
       >
         <component :is="p.icon" class="w-3.5 h-3.5" aria-hidden="true" />

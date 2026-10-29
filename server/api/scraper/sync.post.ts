@@ -1,5 +1,8 @@
 import { defineEventHandler, readBody, createError } from 'h3'
+import type PocketBase from 'pocketbase'
 import { getAuthenticatedServerPb } from '~/server/utils/pocketbase'
+import { getLatestTopics } from '~/server/utils/latest-issues'
+import { LATEST_ISSUE_ID_PREFIX } from '~/lib/latest-issues'
 import {
   analyzeIssue,
   analyzeSentiment,
@@ -129,6 +132,41 @@ async function fetchFeed(url: string, timeoutMs: number): Promise<string | null>
     signal: AbortSignal.timeout(timeoutMs)
   })
   return res.ok ? res.text() : null
+}
+
+/**
+ * ID record monitored_topics tujuan penyimpanan post. Tema trend di-upsert berdasarkan `trend_key` memakai data
+ * tema dari server (bukan body request), jadi klien tidak dapat membuat topik sembarang lewat endpoint sync.
+ */
+async function resolvePersistTopicId(pb: PocketBase, topicId: string): Promise<string | null> {
+  if (PB_RECORD_ID.test(topicId)) return topicId
+  if (!topicId.startsWith(LATEST_ISSUE_ID_PREFIX)) return null
+
+  const topic = (await getLatestTopics()).topics.find(t => t.id === topicId)
+  if (!topic) return null
+  try {
+    return (await pb.collection('monitored_topics').getFirstListItem(pb.filter('trend_key = {:key}', { key: topicId }))).id
+  } catch (err: any) {
+    if (err?.status !== 404) throw err
+  }
+  const record = await pb.collection('monitored_topics').create({
+    title: topic.title,
+    category: topic.category,
+    keywords: topic.keywords,
+    query: topic.query ?? '',
+    entity_filter: [],
+    is_trending: topic.isTrending,
+    trend_velocity: topic.trendVelocity,
+    total_mentions: topic.totalMentions,
+    status: 'active',
+    media_filter: topic.activeMediaSources,
+    origin_timestamp: topic.originTimestamp,
+    summary: topic.summary,
+    pro_arguments: '',
+    contra_arguments: '',
+    trend_key: topicId
+  })
+  return record.id
 }
 
 function matchesEntities(item: ScrapedPostItem, entities: string[]): boolean {
@@ -331,12 +369,14 @@ export default defineEventHandler(async (event) => {
   const items = [...unique.values()].sort((a, b) => a.publishedAt.localeCompare(b.publishedAt))
   const analysis = analyzeIssue(topicId, items, now)
 
-  // Persist ke PocketBase hanya untuk topik yang memang tersimpan di DB
+  // Persist ke PocketBase untuk topik tersimpan dan tema trend; topik contoh/lokal tidak disimpan
   let pbSavedCount = 0
-  if (PB_RECORD_ID.test(topicId)) {
+  if (PB_RECORD_ID.test(topicId) || topicId.startsWith(LATEST_ISSUE_ID_PREFIX)) {
     try {
       const pb = await getAuthenticatedServerPb()
-      if (pb) {
+      const persistTopicId = pb ? await resolvePersistTopicId(pb, topicId) : null
+      if (!pb) logs.push(`[${stamp()}] PocketBase belum tersambung (cek PB_SERVICE_EMAIL/PB_SERVICE_PASSWORD); post tidak disimpan.`)
+      if (pb && persistTopicId) {
         for (const post of items.slice(-MAX_PERSISTED_PER_SYNC)) {
           if (!post.url) continue
           try {
@@ -345,7 +385,7 @@ export default defineEventHandler(async (event) => {
           } catch {}
           try {
             await pb.collection('media_posts').create({
-              topic_id: topicId,
+              topic_id: persistTopicId,
               platform: post.platform,
               external_id: post.url,
               author_handle: post.authorHandle,
@@ -368,7 +408,8 @@ export default defineEventHandler(async (event) => {
         if (pbSavedCount > 0) logs.push(`[${stamp()}] ${pbSavedCount} record baru tersimpan di media_posts.`)
       }
     } catch (err: any) {
-      logs.push(`[${stamp()}] PocketBase tidak tersedia: ${err?.message}`)
+      const fieldErrors = Object.entries(err?.response?.data ?? {}).map(([field, e]: [string, any]) => `${field}: ${e?.message}`)
+      logs.push(`[${stamp()}] Penyimpanan PocketBase gagal: ${err?.message}${fieldErrors.length ? ` (${fieldErrors.join('; ')})` : ''}`)
     }
   }
 
