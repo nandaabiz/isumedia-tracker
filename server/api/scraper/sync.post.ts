@@ -19,11 +19,11 @@ import { mapThreadsMedia } from '~/lib/threads'
 import { mapTikTokVideo } from '~/lib/tiktok'
 import { buildXQuery, mapXTweet } from '~/lib/x'
 import { buildYouTubeQuery, mapYouTubeVideo } from '~/lib/youtube'
-import { isRedditConfigured, redditSubreddits, searchReddit } from '~/server/utils/reddit'
+import { isRedditConfigured, redditSubreddits, searchReddit, searchRedditFeed } from '~/server/utils/reddit'
 import { isThreadsConfigured, searchThreads } from '~/server/utils/threads'
 import { isTikTokConfigured, searchTikTok } from '~/server/utils/tiktok'
 import { isXConfigured, searchX } from '~/server/utils/x'
-import { isYouTubeConfigured, searchYouTube } from '~/server/utils/youtube'
+import { fetchYouTubeChannelFeeds, isYouTubeConfigured, searchYouTube, youtubeChannels } from '~/server/utils/youtube'
 
 interface ScrapedPostItem extends AnalysisInputPost {
   timeAgo: string
@@ -207,13 +207,26 @@ async function collectX(ast: QueryNode | null, now: number): Promise<SourceResul
 }
 
 async function collectYouTube(ast: QueryNode | null, now: number): Promise<SourceResult> {
-  if (!isYouTubeConfigured()) return skipped('YouTube dilewati: YOUTUBE_API_KEY belum diatur.')
+  if (!isYouTubeConfigured()) return collectYouTubeFeeds(ast, now)
   const query = buildYouTubeQuery(ast)
   if (!query) return skipped('YouTube dilewati: kueri tidak memuat kata kunci positif.')
   return collectSource('YouTube', 'Kanal Publik YouTube', ast, now, async () => {
     const { data, cached } = await searchYouTube(query, SOCIAL_TIMEOUT_MS)
     return { posts: data.items.map(i => mapYouTubeVideo(i, data.statsById[i.id?.videoId ?? ''])), cached }
   })
+}
+
+/** Tanpa YOUTUBE_API_KEY: feed resmi kanal pantauan, tanpa pencarian kata kunci sehingga cakupannya terbatas pada kanal tersebut. */
+async function collectYouTubeFeeds(ast: QueryNode | null, now: number): Promise<SourceResult> {
+  if (!keywordCoverTerms(ast).length) return skipped('YouTube dilewati: kueri tidak memuat kata kunci positif.')
+  let failed = 0
+  const result = await collectSource(`YouTube feed ${youtubeChannels().length} kanal (tanpa API key)`, 'Kanal Publik YouTube', ast, now, async () => {
+    const { data, cached, failed: failedChannels } = await fetchYouTubeChannelFeeds(SOCIAL_TIMEOUT_MS)
+    failed = failedChannels
+    return { posts: data.items.map(i => mapYouTubeVideo(i, data.statsById[i.id?.videoId ?? ''])), cached }
+  })
+  if (failed) result.logs.push(`[${stamp()}] YouTube feed: ${failed} kanal gagal diambil.`)
+  return result
 }
 
 async function collectTikTok(ast: QueryNode | null, now: number): Promise<SourceResult> {
@@ -231,12 +244,16 @@ async function collectTikTok(ast: QueryNode | null, now: number): Promise<Source
 }
 
 async function collectForum(ast: QueryNode | null, now: number): Promise<SourceResult> {
-  if (!isRedditConfigured()) return skipped('Forum Reddit dilewati: REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET belum diatur.')
+  const configured = isRedditConfigured()
   const query = buildRedditQuery(ast)
   if (!query) return skipped('Forum Reddit dilewati: kueri tidak memuat kata kunci positif atau melebihi batas 512 karakter.')
-  const label = `Forum Reddit (${redditSubreddits().map(s => `r/${s}`).join(', ')})`
+  const subreddits = redditSubreddits().map(s => `r/${s}`).join(', ')
+  // Tanpa kredensial OAuth: feed search.rss resmi (tanpa skor & jumlah komentar, batas request lebih ketat)
+  const label = configured ? `Forum Reddit (${subreddits})` : `Forum Reddit RSS (${subreddits}, tanpa login)`
   return collectSource(label, 'Anggota Forum Publik', ast, now, async () => {
-    const { data, cached } = await searchReddit(query, SOCIAL_TIMEOUT_MS)
+    const { data, cached } = configured
+      ? await searchReddit(query, SOCIAL_TIMEOUT_MS)
+      : await searchRedditFeed(query, SOCIAL_TIMEOUT_MS)
     return { posts: data.map(mapRedditPost), cached }
   })
 }

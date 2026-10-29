@@ -214,7 +214,7 @@ curl -m 5 http://IP_VPS:3020   # harus gagal/timeout
 curl -m 5 http://IP_VPS:8290   # harus gagal/timeout
 ```
 
-Server juga perlu akses keluar (HTTPS) ke `news.google.com` dan `www.antaranews.com` untuk perayapan RSS, serta host API konektor yang kredensialnya diisi: `graph.threads.net` (Threads), `api.x.com` (X), `www.googleapis.com` (YouTube), `open.tiktokapis.com` (TikTok), `www.reddit.com` dan `oauth.reddit.com` (forum Reddit).
+Server juga perlu akses keluar (HTTPS) ke `news.google.com` dan `www.antaranews.com` untuk perayapan RSS, serta host API konektor yang kredensialnya diisi: `graph.threads.net` (Threads), `api.x.com` (X), `www.googleapis.com` (YouTube API) atau `www.youtube.com` (feed kanal tanpa API key), `open.tiktokapis.com` (TikTok), `www.reddit.com` dan `oauth.reddit.com` (forum Reddit; feed tanpa login cukup `www.reddit.com`).
 
 ## 11. Update aplikasi
 

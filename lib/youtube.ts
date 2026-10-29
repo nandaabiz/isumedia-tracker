@@ -1,8 +1,10 @@
 /**
  * Konektor YouTube (YouTube Data API v3 `search.list` + `videos.list`): kueri dan normalisasi hasil.
+ * Tanpa API key, server memakai feed Atom resmi per kanal (`feeds/videos.xml`) yang dipetakan ke bentuk yang sama.
  *
  * Pure functions agar dapat diuji langsung dengan `node --test`; HTTP client ada di server/utils/youtube.ts.
  */
+import { atomEntries, decodeHtmlEntities, tagAttr, tagText } from './atom.ts'
 import { keywordCoverTerms, type AnalysisInputPost, type QueryNode } from './issue-analysis.ts'
 
 export interface YouTubeSearchItem {
@@ -33,17 +35,6 @@ export function buildYouTubeQuery(node: QueryNode | null): string {
     .join('|')
 }
 
-/** Judul & deskripsi dari search.list di-escape sebagai entitas HTML. */
-export function decodeHtmlEntities(text: string): string {
-  return text
-    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
-    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16)))
-    .replace(/&quot;/g, '"')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&amp;/g, '&')
-}
-
 export function mapYouTubeVideo(item: YouTubeSearchItem, stats?: YouTubeVideoStatistics): AnalysisInputPost | null {
   const videoId = item.id?.videoId
   const snippet = item.snippet
@@ -67,4 +58,49 @@ export function mapYouTubeVideo(item: YouTubeSearchItem, stats?: YouTubeVideoSta
     reach: Number(stats?.viewCount ?? 0) || 0,
     engagement: (Number(stats?.likeCount ?? 0) || 0) + (Number(stats?.commentCount ?? 0) || 0)
   }
+}
+
+/** Kanal berita nasional default untuk feed tanpa API key (ID kanal diverifikasi 2026-10-29). */
+export const DEFAULT_YOUTUBE_CHANNELS = [
+  'UC5BMIWZe9isJXLZZWPWvBlg', // KOMPASTV
+  'UCzl0OrB3-ehunyotIQvK77A', // METRO TV
+  'UCER4rvDnRBPr_ncYW4UCZjg', // tvOneNews
+  'UCoSkllfpgmFHtbVK835QaQg' // Official iNews
+]
+
+/** Daftar ID kanal (`UC` + 22 karakter) dari env `YOUTUBE_CHANNEL_IDS` (dipisah koma); ID tidak valid dibuang. */
+export function parseYouTubeChannels(value: string | undefined): string[] {
+  const ids = (value || '')
+    .split(',')
+    .map(s => s.trim())
+    .filter(s => /^UC[A-Za-z0-9_-]{22}$/.test(s))
+  return ids.length ? [...new Set(ids)] : DEFAULT_YOUTUBE_CHANNELS
+}
+
+/**
+ * Feed kanal (15 video terbaru) ke bentuk hasil search.list + videos.list. Teks dibiarkan ter-escape karena
+ * `mapYouTubeVideo` yang mendekode entitas. Jumlah rating = jumlah like sejak dislike disembunyikan; komentar tidak tersedia.
+ */
+export function parseYouTubeFeed(xml: string): { items: YouTubeSearchItem[]; statsById: Record<string, YouTubeVideoStatistics> } {
+  const items: YouTubeSearchItem[] = []
+  const statsById: Record<string, YouTubeVideoStatistics> = {}
+  for (const entry of atomEntries(xml)) {
+    const videoId = tagText(entry, 'yt:videoId')
+    if (!videoId) continue
+    items.push({
+      id: { videoId },
+      snippet: {
+        publishedAt: tagText(entry, 'published'),
+        channelId: tagText(entry, 'yt:channelId'),
+        channelTitle: decodeHtmlEntities(tagText(tagText(entry, 'author'), 'name')),
+        title: tagText(entry, 'title'),
+        description: tagText(entry, 'media:description')
+      }
+    })
+    statsById[videoId] = {
+      viewCount: tagAttr(entry, 'media:statistics', 'views') || undefined,
+      likeCount: tagAttr(entry, 'media:starRating', 'count') || undefined
+    }
+  }
+  return { items, statsById }
 }

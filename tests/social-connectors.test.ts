@@ -2,9 +2,10 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { matchesQuery, parseBooleanQuery } from '../lib/issue-analysis.ts'
 import { buildXQuery, mapXTweet, toXQuery } from '../lib/x.ts'
-import { buildYouTubeQuery, decodeHtmlEntities, mapYouTubeVideo } from '../lib/youtube.ts'
+import { decodeHtmlEntities } from '../lib/atom.ts'
+import { buildYouTubeQuery, DEFAULT_YOUTUBE_CHANNELS, mapYouTubeVideo, parseYouTubeChannels, parseYouTubeFeed } from '../lib/youtube.ts'
 import { buildTikTokQueryBody, mapTikTokVideo, quoteVideoIds } from '../lib/tiktok.ts'
-import { buildRedditQuery, mapRedditPost, parseSubreddits, toRedditQuery } from '../lib/reddit.ts'
+import { buildRedditQuery, mapRedditPost, parseRedditFeed, parseSubreddits, toRedditQuery } from '../lib/reddit.ts'
 
 // --- X
 
@@ -82,6 +83,57 @@ test('pemetaan video YouTube beserta statistik dan entitas HTML', () => {
   // Statistik like disembunyikan pemilik kanal → dihitung 0, bukan NaN
   assert.equal(mapYouTubeVideo({ id: { videoId: 'x' }, snippet: { publishedAt: '2026-10-21T10:00:00Z', channelTitle: 'K', title: 'T' } }, { viewCount: '9' })!.engagement, 0)
   assert.equal(mapYouTubeVideo({ id: {}, snippet: { publishedAt: '2026-10-21T10:00:00Z', channelTitle: 'K', title: 'T' } }), null)
+})
+
+// Potongan feed kanal asli (struktur feeds/videos.xml)
+const YOUTUBE_FEED = `<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
+ <title>KOMPASTV</title>
+ <author><name>KOMPASTV</name><uri>https://www.youtube.com/channel/UC5BMIWZe9isJXLZZWPWvBlg</uri></author>
+ <entry>
+  <id>yt:video:4WFhfZluSp0</id>
+  <yt:videoId>4WFhfZluSp0</yt:videoId>
+  <yt:channelId>UC5BMIWZe9isJXLZZWPWvBlg</yt:channelId>
+  <title>PPN 12% &amp; Harga Sembako</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=4WFhfZluSp0"/>
+  <author><name>KOMPAS &amp; TV</name><uri>https://www.youtube.com/channel/UC5BMIWZe9isJXLZZWPWvBlg</uri></author>
+  <published>2026-10-29T07:09:34+00:00</published>
+  <updated>2026-10-29T07:09:47+00:00</updated>
+  <media:group>
+   <media:title>PPN 12% &amp; Harga Sembako</media:title>
+   <media:description>JAKARTA, KOMPAS.TV - Dampak kenaikan tarif.
+
+#ppn</media:description>
+   <media:community>
+    <media:starRating count="120" average="5.00" min="1" max="5"/>
+    <media:statistics views="8245"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry><id>yt:video:tanpa-id</id><title>Rusak</title></entry>
+</feed>`
+
+test('feed kanal YouTube dipetakan sama seperti hasil search.list', () => {
+  const { items, statsById } = parseYouTubeFeed(YOUTUBE_FEED)
+  assert.equal(items.length, 1)
+  const post = mapYouTubeVideo(items[0]!, statsById[items[0]!.id!.videoId!])
+  assert.ok(post)
+  assert.equal(post.url, 'https://www.youtube.com/watch?v=4WFhfZluSp0')
+  assert.equal(post.title, 'PPN 12% & Harga Sembako')
+  assert.equal(post.content, 'PPN 12% & Harga Sembako. JAKARTA, KOMPAS.TV - Dampak kenaikan tarif. #ppn')
+  assert.equal(post.source, 'KOMPAS & TV')
+  assert.equal(post.publishedAt, '2026-10-29T07:09:34.000Z')
+  assert.equal(post.reach, 8245)
+  assert.equal(post.engagement, 120)
+})
+
+test('daftar kanal YouTube dari env divalidasi', () => {
+  assert.deepEqual(parseYouTubeChannels(undefined), DEFAULT_YOUTUBE_CHANNELS)
+  assert.deepEqual(
+    parseYouTubeChannels(' UCzl0OrB3-ehunyotIQvK77A, @metrotvnews, UCzl0OrB3-ehunyotIQvK77A,UC123'),
+    ['UCzl0OrB3-ehunyotIQvK77A']
+  )
+  assert.deepEqual(parseYouTubeChannels('../etc'), DEFAULT_YOUTUBE_CHANNELS)
 })
 
 // --- TikTok
@@ -162,4 +214,24 @@ test('pemetaan thread Reddit ke post analisa', () => {
   assert.ok(matchesQuery(parseBooleanQuery('ppn AND sembako'), `${post.title} ${post.content}`))
   assert.equal(mapRedditPost({ ...base, over_18: true }), null)
   assert.equal(mapRedditPost({ ...base, author: '[deleted]' }), null)
+})
+
+// Potongan feed search.rss asli: teks post berupa HTML ter-escape di antara penanda SC_OFF/SC_ON
+const REDDIT_FEED = `<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/"><category term="indonesia" label="r/indonesia"/><title>indonesia: search results</title><entry><author><name>/u/warga_rdt</name><uri>https://www.reddit.com/user/warga_rdt</uri></author><category term="indonesia" label="r/indonesia"/><content type="html">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;Harga sembako &amp;amp; beras&lt;/p&gt; &lt;p&gt;sudah naik&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/warga_rdt&quot;&gt; /u/warga_rdt &lt;/a&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content><id>t3_q1w2e3</id><link href="https://www.reddit.com/r/indonesia/comments/q1w2e3/pendapat_soal_ppn_12/" /><updated>2026-10-28T23:20:42+00:00</updated><published>2026-10-28T23:20:42+00:00</published><title>Pendapat soal PPN 12%&#39;?</title></entry><entry><author><name>/u/link_only</name></author><category term="indonesia" label="r/indonesia"/><content type="html">&lt;table&gt;&lt;/table&gt;</content><id>t3_a1b2c3</id><link href="https://www.reddit.com/r/indonesia/comments/a1b2c3/berita/" /><published>2026-10-28T20:00:00+00:00</published><title>Berita PPN</title></entry><entry><id>t3_evil</id><link href="https://evil.example/r/indonesia/comments/x/" /><published>2026-10-28T20:00:00+00:00</published><title>Bukan Reddit</title></entry></feed>`
+
+test('feed search.rss Reddit dipetakan ke post analisa tanpa metrik', () => {
+  const raw = parseRedditFeed(REDDIT_FEED)
+  // Entry dengan link di luar www.reddit.com dibuang
+  assert.equal(raw.length, 2)
+  const post = mapRedditPost(raw[0]!)
+  assert.ok(post)
+  assert.equal(post.id, 'reddit_q1w2e3')
+  assert.equal(post.url, 'https://www.reddit.com/r/indonesia/comments/q1w2e3/pendapat_soal_ppn_12/')
+  assert.equal(post.authorHandle, 'u/warga_rdt')
+  assert.equal(post.title, "Pendapat soal PPN 12%'?")
+  assert.equal(post.content, "Pendapat soal PPN 12%'?. Harga sembako & beras sudah naik")
+  assert.equal(post.publishedAt, '2026-10-28T23:20:42.000Z')
+  assert.equal(post.engagement, 0)
+  // Post tautan tanpa teks: konten = judul
+  assert.equal(mapRedditPost(raw[1]!)!.content, 'Berita PPN')
 })

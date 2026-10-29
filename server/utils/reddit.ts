@@ -1,14 +1,18 @@
-import { parseSubreddits, type RedditPost } from '~/lib/reddit'
+import { parseRedditFeed, parseSubreddits, type RedditPost } from '~/lib/reddit'
 import { createTtlCache } from '~/server/utils/ttl-cache'
 
 const REDDIT_TOKEN_URL = 'https://www.reddit.com/api/v1/access_token'
 const REDDIT_API_URL = 'https://oauth.reddit.com'
+const REDDIT_FEED_URL = 'https://www.reddit.com'
 // Reddit mewajibkan User-Agent unik berformat <platform>:<app id>:<versi>; UA generik di-throttle
 const USER_AGENT = 'server:isumedia-tracker:1.0 (riset media publik)'
 // Rate limit OAuth: 100 request/menit per client
 const CACHE_TTL_MS = 5 * 60 * 1000
+// Feed tanpa OAuth dibatasi sangat ketat (±1 request/menit per IP; terlampaui = HTTP 429), jadi cache lebih lama
+const FEED_CACHE_TTL_MS = 15 * 60 * 1000
 
 const cache = createTtlCache<RedditPost[]>(CACHE_TTL_MS)
+const feedCache = createTtlCache<RedditPost[]>(FEED_CACHE_TTL_MS)
 let appToken: { value: string; expiresAt: number } | null = null
 
 export function isRedditConfigured(): boolean {
@@ -75,5 +79,32 @@ export async function searchReddit(query: string, timeoutMs: number): Promise<{ 
 
   const posts: RedditPost[] = body.data.children.filter((c: any) => c?.kind === 't3' && c.data).map((c: any) => c.data)
   cache.set(key, posts)
+  return { data: posts, cached: false }
+}
+
+/** Fallback tanpa kredensial: feed Atom resmi `search.rss` dengan parameter pencarian yang sama. */
+export async function searchRedditFeed(query: string, timeoutMs: number): Promise<{ data: RedditPost[]; cached: boolean }> {
+  const subreddits = redditSubreddits().join('+')
+  const key = `${subreddits}|${query}`
+  const hit = feedCache.get(key)
+  if (hit) return { data: hit, cached: true }
+
+  const params = new URLSearchParams({
+    q: query,
+    restrict_sr: 'on',
+    sort: 'new',
+    t: 'week',
+    limit: '100',
+    include_over_18: 'off'
+  })
+  const res = await fetch(`${REDDIT_FEED_URL}/r/${subreddits}/search.rss?${params}`, {
+    headers: { 'User-Agent': USER_AGENT },
+    signal: AbortSignal.timeout(timeoutMs)
+  })
+  if (res.status === 429) throw new RedditApiError('batas request feed tanpa login terlampaui (HTTP 429)')
+  if (!res.ok) throw new RedditApiError(`HTTP ${res.status}`)
+
+  const posts = parseRedditFeed(await res.text())
+  feedCache.set(key, posts)
   return { data: posts, cached: false }
 }

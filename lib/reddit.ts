@@ -1,8 +1,10 @@
 /**
  * Konektor forum publik (Reddit API `search` pada subreddit Indonesia): penerjemahan kueri dan normalisasi hasil.
+ * Tanpa kredensial OAuth, server memakai feed Atom resmi `search.rss` yang dipetakan ke bentuk yang sama.
  *
  * Pure functions agar dapat diuji langsung dengan `node --test`; HTTP client ada di server/utils/reddit.ts.
  */
+import { atomEntries, decodeHtmlEntities, tagAttr, tagText } from './atom.ts'
 import { keywordCoverTerms, type AnalysisInputPost, type QueryNode } from './issue-analysis.ts'
 
 export interface RedditPost {
@@ -75,4 +77,35 @@ export function mapRedditPost(post: RedditPost): AnalysisInputPost | null {
     reach: 0,
     engagement: Math.max(0, post.score ?? 0) + (post.num_comments ?? 0)
   }
+}
+
+/**
+ * Feed `search.rss` ke bentuk post API. Feed tidak memuat skor, jumlah komentar, maupun flag NSFW; NSFW disaring
+ * lewat parameter `include_over_18=off`. Teks post ada di dalam HTML ter-escape di antara penanda SC_OFF/SC_ON.
+ */
+export function parseRedditFeed(xml: string): RedditPost[] {
+  const posts: RedditPost[] = []
+  for (const entry of atomEntries(xml)) {
+    const id = tagText(entry, 'id').replace(/^t3_/, '')
+    const link = decodeHtmlEntities(tagAttr(entry, 'link', 'href'))
+    let permalink = ''
+    try {
+      const url = new URL(link)
+      if (url.hostname === 'www.reddit.com') permalink = url.pathname
+    } catch {}
+    const html = decodeHtmlEntities(tagText(entry, 'content'))
+    const body = html.match(/<!-- SC_OFF -->([\s\S]*?)<!-- SC_ON -->/)?.[1] ?? ''
+    const published = Date.parse(tagText(entry, 'published'))
+    if (!id || !permalink || isNaN(published)) continue
+    posts.push({
+      id,
+      title: decodeHtmlEntities(tagText(entry, 'title')),
+      selftext: decodeHtmlEntities(body.replace(/<[^>]+>/g, ' ')),
+      author: decodeHtmlEntities(tagText(tagText(entry, 'author'), 'name')).replace(/^\/u\//, ''),
+      subreddit: tagAttr(entry, 'category', 'term'),
+      permalink,
+      created_utc: Math.floor(published / 1000)
+    })
+  }
+  return posts
 }

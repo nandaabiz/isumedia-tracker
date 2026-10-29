@@ -41,9 +41,9 @@ Aplikasi ini dibangun menggunakan arsitektur modern:
   - Portal Berita Online (RSS & Scraper terverifikasi Dewan Pers)
   - Threads (Post publik via Threads API `keyword_search`)
   - X / Twitter (Post publik via X API v2 recent search)
-  - YouTube (Video publik via YouTube Data API v3)
+  - YouTube (Video publik via YouTube Data API v3; tanpa API key: feed resmi kanal pantauan)
   - TikTok (Deskripsi video publik via TikTok Research API)
-  - Forum Publik (Thread subreddit Indonesia via Reddit API)
+  - Forum Publik (Thread subreddit Indonesia via Reddit API; tanpa kredensial: feed search.rss resmi)
   - *Strict Exclusion*: Sistem mengabaikan seluruh akun pribadi/privat.
 
 #### 1.2 Origin & Amplification Network (Pemantik & Duplikasi)
